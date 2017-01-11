@@ -3,5 +3,5 @@
 Homebrew tap for my binaries.
 
 ```console
-brew install caarlos0/tap/thingy
+brew install caarlos0/tap/$APP
 ```
