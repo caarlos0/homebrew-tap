@@ -3,7 +3,7 @@ class Test < Formula
   homepage "https://github.com/caarlos0/test"
   url "https://github.com/caarlos0/test/releases/download/v1.1.0/test_macOS_64bits.tar.gz"
   version "1.1.0"
-  sha256 "95b08f2e233af1d0b039464ff1b1ead950f1ae6c22dcb277f5ad16e665e20619"
+  sha256 "309bce6e8377a5902681aacd1db5e3df40906d16181836a709074fb6613314ae"
 
   def install
     bin.install "test"
