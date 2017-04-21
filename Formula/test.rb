@@ -1,9 +1,9 @@
 class Test < Formula
-  desc "TODO"
-  homepage "https://github.com/caarlos0/test"
-  url "https://github.com/caarlos0/test/releases/download/v2.1.9/test_macOS_64bits.tar.gz"
-  version "2.1.9"
-  sha256 "cc32602a41f43a621a8b8afcb898a5db91f7ee6e32b65f7cc65fb61ea2c84757"
+  desc ""
+  homepage ""
+  url "https://github.com/caarlos0/test/releases/download/v2.2.1/test_macOS_64bits.tar.gz"
+  version "2.2.1"
+  sha256 "8d1d0cea1abcde4f1d7da2e1adfa8e2283f886a210bb3929fbbab3096c894c4d"
 
   def install
     bin.install "test"
