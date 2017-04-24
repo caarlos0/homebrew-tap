@@ -1,9 +1,9 @@
 class Karmahub < Formula
-  desc "Compares the amount of issues and pull requests you created with the amount of comments and code reviews you did."
-  homepage "https://github.com/caarlos0/karmahub"
-  url "https://github.com/caarlos0/karmahub/releases/download/v1.2.1/karmahub_Darwin_x86_64.tar.gz"
-  version "1.2.1"
-  sha256 "32d8439a2710fef2d64279e45cf2959d410bbc496d85a47715b35f8cc6c29d15"
+  desc ""
+  homepage ""
+  url "https://github.com/caarlos0/karmahub/releases/download/v1.2.2/karmahub_Darwin_x86_64.tar.gz"
+  version "1.2.2"
+  sha256 "a717a53d4ca93ba374405fee73ce3630b0a9e4635810e67f1b4ad56d3f2c4727"
 
   def install
     bin.install "karmahub"
