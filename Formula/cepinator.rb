@@ -3,7 +3,7 @@ class Cepinator < Formula
   homepage "http://github.com/caarlos0/cepinator"
   url "https://github.com/caarlos0/cepinator/releases/download/v1.0.0/cepinator_Darwin_x86_64.tar.gz"
   version "1.0.0"
-  sha256 "57c036b127fc93d738848303f5ce24f3fb5f9dcb13ad73a0d751371c81c8a1ee"
+  sha256 "09fd69460c6c3a3513cbeea113f0a3c4c61504cbcb2af04b5c1afd60a01a8043"
   
   depends_on "git"
 
