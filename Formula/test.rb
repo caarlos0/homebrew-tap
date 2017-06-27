@@ -1,11 +1,12 @@
 class Test < Formula
   desc ""
   homepage ""
-  url "https://github.com/caarlos0/test/releases/download/v2.2.3/test_macOS_64bits.tar.gz"
-  version "2.2.3"
-  sha256 "ae72d8509d790021ed97c5baf337cb56b622941a6b61e41c3bd65e50a7b3573e"
+  url "https://github.com/caarlos0/test/releases/download/v3.0.1/test.tar.gz.tar.gz"
+  version "3.0.1"
+  sha256 "7241f3cced9b44b03e313be580e72a8868f70ad843c0b6b69f05ba5ea06dda79"
 
   def install
+    bin.install "test"
     bin.install "test"
   end
 
