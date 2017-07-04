@@ -1,12 +1,13 @@
 class Test < Formula
   desc ""
   homepage ""
-  url "https://github.com/caarlos0/test/releases/download/v4.0.0/test_4.0.0_macOS_64bits.zip"
-  version "4.0.0"
-  sha256 "47569fd460c8c56323bd9f4740c59da611ad6c8a8dfa7f3ce7c9331df684f570"
+  url "https://github.com/caarlos0/test/releases/download/v4.0.7/test_4.0.7_macOS_64bits.binary"
+  version "4.0.7"
+  sha256 "8b4e4108c5fcee30327ec74a6b560da8ef00e614ebf5a876c0a83797a928c3c7"
 
   def install
-    bin.install "test"
+    bin.install "moises"
+    bin.install "foo"
   end
 
   def caveats
