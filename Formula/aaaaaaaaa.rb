@@ -1,13 +1,13 @@
 class Aaaaaaaaa < Formula
   desc ""
   homepage ""
-  url "https://github.com/caarlos0/test/releases/download/v4.6.5/moises_4.6.5_macOS_64bits"
-  version "4.5.7"
-  sha256 "fabd56eaf8d27520431ccca5132f7194bfbef238efee7714803a97561c05dd67"
+  url "https://github.com/caarlos0/test/releases/download/v10.0.2/aaaaaaaaa_10.0.2_macOS_64bits.tar.gz"
+  version "10.0.2"
+  sha256 "0a89b48aca6138d46d6a2df859bc1098dc9ae3e8459cecda1992230311864058"
 
   def install
-    bin.install "moises_4.6.5_macOS_64bits"
-    mv bin/"moises_4.6.5_macOS_64bits", bin/"moises"
+    bin.install "moises"
+    bin.install "foo"
   end
 
   def caveats
