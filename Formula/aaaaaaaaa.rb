@@ -1,9 +1,9 @@
 class Aaaaaaaaa < Formula
   desc ""
   homepage ""
-  url "https://github.com/caarlos0/test/releases/download/v12.0.0/aaaaaaaaa_12.0.0_macOS_64bits.tar.gz"
-  version "12.0.0"
-  sha256 "87a416893cad05318de858ffa0352872b50e7763d7af6b8e28d1182bae9a27fc"
+  url "https://github.com/caarlos0/test/releases/download/v12.0.2/aaaaaaaaa_12.0.2_macOS_64bits.tar.gz"
+  version "12.0.2"
+  sha256 "7cd50c572c605a5407b15a08417760adcdefc780c9a381cc33fc384862f502fe"
 
   def install
     bin.install "moises"
