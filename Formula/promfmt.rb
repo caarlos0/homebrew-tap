@@ -1,9 +1,9 @@
 class Promfmt < Formula
   desc ""
   homepage ""
-  url "https://github.com/caarlos0/promfmt/releases/download/v0.0.6/promfmt_darwin_amd64.tar.gz"
-  version "0.0.6"
-  sha256 "bbab55360965f716c0ff2dc2152f7c9963087acd75a87504fff9552e82576fcf"
+  url "https://github.com/caarlos0/promfmt/releases/download/v1.0.0/promfmt_darwin_amd64.tar.gz"
+  version "1.0.0"
+  sha256 "28629c3af9d2df5939f4e29901d4304c30f26eae64514a6a3a686d94e901c023"
 
   def install
     bin.install "promfmt"
