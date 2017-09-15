@@ -1,9 +1,9 @@
 class DomainExporter < Formula
   desc ""
   homepage ""
-  url "https://github.com/caarlos0/domain_exporter/releases/download/v1.0.1/domain_exporter_darwin_amd64.tar.gz"
-  version "1.0.1"
-  sha256 "e611cc7919416a437fdb2cc5f1ea993dd940338be611023eecf918922ae50f8d"
+  url "https://github.com/caarlos0/domain_exporter/releases/download/v1.0.2/domain_exporter_darwin_amd64.tar.gz"
+  version "1.0.2"
+  sha256 "b4d752e908b37b1f17e48d44b8ce1fc5a43a9b45cde378ad1bb9ab513beffa38"
 
   def install
     bin.install "domain_exporter"
