@@ -1,11 +1,15 @@
 class Karmahub < Formula
   desc ""
   homepage ""
-  url "https://github.com/caarlos0/karmahub/releases/download/v2.0.0/karmahub_Darwin_x86_64.tar.gz"
-  version "2.0.0"
-  sha256 "c4daf40772c3516ce7ef7fb8785cb57d4d2d8b3f433b469a1e8153208d7b09a1"
+  url "https://github.com/caarlos0/karmahub/releases/download/v2.0.1/karmahub_2.0.1_darwin_amd64.tar.gz"
+  version "2.0.1"
+  sha256 "65f7e8051fcb9eed1cb15502f167f73b7a12d8034c96eb282d845df3ff35e961"
 
   def install
     bin.install "karmahub"
+  end
+
+  test do
+    
   end
 end
