@@ -1,9 +1,9 @@
 class VersionExporter < Formula
   desc ""
   homepage ""
-  url "https://github.com/caarlos0/version_exporter/releases/download/v0.0.6/version_exporter_darwin_amd64.tar.gz"
-  version "0.0.6"
-  sha256 "ba588e8a375df455b134d78d1756e664dd83ed3cdf917376ff1b2749dd218d8b"
+  url "https://github.com/caarlos0/version_exporter/releases/download/v0.0.7/version_exporter_darwin_amd64.tar.gz"
+  version "0.0.7"
+  sha256 "8b89dd8db929eb21cc3edb9065062f19664e4cdbe302a672b7f24afb824c0cf4"
 
   def install
     bin.install "version_exporter"
