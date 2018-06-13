@@ -1,9 +1,9 @@
 class GithubReleasesExporter < Formula
   desc ""
   homepage ""
-  url "https://github.com/caarlos0/github_releases_exporter/releases/download/v1.1.1/github_releases_exporter_darwin_amd64.tar.gz"
-  version "1.1.1"
-  sha256 "f29f82965e9cf346d5478d31bdcf2fd4a9f6dd9edd6f40671af4f332abfecf17"
+  url "https://github.com/caarlos0/github_releases_exporter/releases/download/v1.1.2/github_releases_exporter_darwin_amd64.tar.gz"
+  version "1.1.2"
+  sha256 "6a0fb7e173f57ea8beb350a8f0bcf2c6f2deac4b1a6348a31d51157509f122c3"
 
   def install
     bin.install "github_releases_exporter"
