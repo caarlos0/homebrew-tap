@@ -1,9 +1,9 @@
 class ForkCleaner < Formula
   desc "Cleans up old and inactive forks on your github account."
   homepage "https://github.com/caarlos0/fork-cleaner"
-  url "https://github.com/caarlos0/fork-cleaner/releases/download/v1.4.2/fork-cleaner_1.4.2_darwin_amd64.tar.gz"
-  version "1.4.2"
-  sha256 "ead13a1904be30676fe2c21e49bcf01c8c25383cfebdc2ad237a0ac0a68bdef0"
+  url "https://github.com/caarlos0/fork-cleaner/releases/download/v1.4.3/fork-cleaner_1.4.3_darwin_amd64.tar.gz"
+  version "1.4.3"
+  sha256 "149958435387ca0073c15873bc15112c4b59915887a0ee1b0f9e3264f273a4a6"
 
   def install
     bin.install "fork-cleaner"
