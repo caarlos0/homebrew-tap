@@ -1,9 +1,9 @@
 class Jsonfmt < Formula
   desc "Like gofmt, but for JSON files"
   homepage "https://carlosbecker.com"
-  url "https://github.com/caarlos0/jsonfmt/releases/download/v0.2.0/jsonfmt_0.2.0_darwin_amd64.tar.gz"
-  version "0.2.0"
-  sha256 "3d6353c4c9d1aec24bcbd951040e826cdb00578d1fe1f45e5c449d75e0eb395b"
+  url "https://github.com/caarlos0/jsonfmt/releases/download/v0.2.1/jsonfmt_0.2.1_darwin_amd64.tar.gz"
+  version "0.2.1"
+  sha256 "28b80f1e84f1473faa94279472da4cf889905f3c168d1109bf1ea2ec2c41e620"
 
   def install
     bin.install "jsonfmt"
