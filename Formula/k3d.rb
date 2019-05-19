@@ -4,9 +4,11 @@ class K3d < Formula
   url "https://github.com/rancher/k3d/releases/download/v1.2.1/k3d-darwin-amd64"
   version "1.2.1"
   sha256 "1e8d5af11be3f119a7759eb3ff2245170e7efe057b32d8b8e8bb9281dccf0fdc"
+  revision 1
 
   def install
     libexec.install "k3d-darwin-amd64"
+    chmod(0555, "#{libexec}/k3d-darwin-amd64")
     bin.install_symlink("#{libexec}/k3d-darwin-amd64" => "k3d")
   end
 
