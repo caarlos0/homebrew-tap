@@ -1,9 +1,9 @@
 class K3d < Formula
   desc "Little helper to run Rancher Lab's k3s in Docker"
   homepage "https://github.com/rancher/k3d"
-  url "https://github.com/rancher/k3d/releases/download/v1.2.1/k3d-darwin-amd64"
-  version "1.2.1"
-  sha256 "1e8d5af11be3f119a7759eb3ff2245170e7efe057b32d8b8e8bb9281dccf0fdc"
+  url "https://github.com/rancher/k3d/releases/download/v1.2.2/k3d-darwin-amd64"
+  version "1.2.2"
+  sha256 "5ecf399b99624d9f63f354187b43fb8214aea455cee7c35f04a5fcf817b711d2"
   revision 1
 
   def install
