@@ -2,16 +2,16 @@
 class ForkCleaner < Formula
   desc "Cleans up old and inactive forks on your github account."
   homepage "https://github.com/caarlos0/fork-cleaner"
-  version "1.5.0"
+  version "1.5.1"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/caarlos0/fork-cleaner/releases/download/v1.5.0/fork-cleaner_1.5.0_darwin_amd64.tar.gz"
-    sha256 "022d7a476fc9425a1f31637cb6b267c808424fc45e144a06a230cdc91001a7fa"
+    url "https://github.com/caarlos0/fork-cleaner/releases/download/v1.5.1/fork-cleaner_1.5.1_darwin_amd64.tar.gz"
+    sha256 "f8cbbd54c6567ac96843c3d6058ba840926e150f241af8e74804ed4d15f84470"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/caarlos0/fork-cleaner/releases/download/v1.5.0/fork-cleaner_1.5.0_linux_amd64.tar.gz"
-      sha256 "a620bdf95059fced7fdb2eee8fa221c50c87c001b647a145d509d737060d3ebd"
+      url "https://github.com/caarlos0/fork-cleaner/releases/download/v1.5.1/fork-cleaner_1.5.1_linux_amd64.tar.gz"
+      sha256 "3423c51a186ce5595ebf2f07613e4089e480af1c11b88e12c3065ffa9047f2f2"
     end
   end
 
