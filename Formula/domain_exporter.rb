@@ -2,9 +2,25 @@
 class DomainExporter < Formula
   desc ""
   homepage ""
-  url "https://github.com/caarlos0/domain_exporter/releases/download/v1.4.0/domain_exporter_darwin_amd64.tar.gz"
-  version "1.4.0"
-  sha256 "cb50174b73c751e8bf2f88c71d48fd6a3a6c0bba3612aac04abf007a3f2a749f"
+  version "1.5.0"
+  bottle :unneeded
+
+  if OS.mac?
+    url "https://github.com/caarlos0/domain_exporter/releases/download/v1.5.0/domain_exporter_darwin_amd64.tar.gz"
+    sha256 "0c69bb2524103a5a06d359d60aaed28617f98663b97bc021da4b74a8473e5394"
+  elsif OS.linux?
+    if Hardware::CPU.intel?
+      url "https://github.com/caarlos0/domain_exporter/releases/download/v1.5.0/domain_exporter_linux_amd64.tar.gz"
+      sha256 "bbc72fa9d5f7e4e22f7ddfb757d447b19b9eef7fa36ad65e7f658d1aefbd1843"
+    end
+    if Hardware::CPU.arm?
+      if Hardware::CPU.is_64_bit?
+      else
+        url "https://github.com/caarlos0/domain_exporter/releases/download/v1.5.0/domain_exporter_linux_arm.tar.gz"
+        sha256 "b0515e6c097cc568347b44129d46fb12f64d60b0fdaf451f02656204567080e9"
+      end
+    end
+  end
 
   def install
     bin.install "domain_exporter"
