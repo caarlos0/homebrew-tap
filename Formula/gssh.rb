@@ -1,10 +1,10 @@
 class Gssh < Formula
   desc "quickly ssh into gcloud instances"
   homepage "https://github.com/caarlos0/gssh"
-  url "https://raw.githubusercontent.com/caarlos0/gssh/v1.0.0/gssh"
-  version "1.0.0"
+  url "https://raw.githubusercontent.com/caarlos0/gssh/v1.0.1/gssh"
+  version "1.0.1"
   # revision 1
-  sha256 "5d477e4b7c81fbeb03c9e655810912c1749da4fda024c1da2e79f9a31b565530"
+  sha256 "f781a391a8cc3a0925ba2202bca157da41f766c206e35c7937598a55af514d4e"
 
   depends_on "jq"
   depends_on "fzf"
