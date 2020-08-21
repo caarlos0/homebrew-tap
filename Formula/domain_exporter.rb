@@ -2,22 +2,22 @@
 class DomainExporter < Formula
   desc ""
   homepage ""
-  version "1.7.2"
+  version "1.8.0"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/caarlos0/domain_exporter/releases/download/v1.7.2/domain_exporter_darwin_amd64.tar.gz"
-    sha256 "1d736fa82c5fff2c31569bc2ddd25270388ae65cccabd550e6bf2e00a02983e4"
+    url "https://github.com/caarlos0/domain_exporter/releases/download/v1.8.0/domain_exporter_darwin_amd64.tar.gz"
+    sha256 "2fa80080f11b6ab8a45c5b9a78e096d46c82bc0e4a64a42f57c55e69f27584ef"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/caarlos0/domain_exporter/releases/download/v1.7.2/domain_exporter_linux_amd64.tar.gz"
-      sha256 "c598b806a801c5293cb3866094c6ebffbabfc2b472747b9b3da2e13e6d7fa08c"
+      url "https://github.com/caarlos0/domain_exporter/releases/download/v1.8.0/domain_exporter_linux_amd64.tar.gz"
+      sha256 "9707d5eda503a9ddc86dc4163d05e140698cadeb7ff05dd7146a5bd2d10f9863"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
       else
-        url "https://github.com/caarlos0/domain_exporter/releases/download/v1.7.2/domain_exporter_linux_arm.tar.gz"
-        sha256 "89d4a9cb2a64270f3ce11f8c4d00965e05990290ab902cebf6a1b48416851e86"
+        url "https://github.com/caarlos0/domain_exporter/releases/download/v1.8.0/domain_exporter_linux_arm.tar.gz"
+        sha256 "7459e4d408944a56b2cb950538e0838e72659db3dafac41831d5b6089af69159"
       end
     end
   end
