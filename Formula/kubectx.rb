@@ -2,24 +2,24 @@
 class Kubectx < Formula
   desc "kubectx and kubens are power tools for kubectl"
   homepage "https://kubectx.dev"
-  version "0.9.2"
+  version "0.9.3"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/caarlos0/kubectx/releases/download/v0.9.2/kubectx_v0.9.2_darwin_x86_64.tar.gz"
-    sha256 "2a86be3700aaba0dd4446a51ca1f53ee4400500129f4833fbb4fb1b35f9e995b"
+    url "https://github.com/caarlos0/kubectx/releases/download/v0.9.3/kubectx_v0.9.3_darwin_x86_64.tar.gz"
+    sha256 "df81dd2ebe0890a6a99fa03e42fcd7492a0d0161031628eacb156c84114e078a"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/caarlos0/kubectx/releases/download/v0.9.2/kubectx_v0.9.2_linux_x86_64.tar.gz"
-      sha256 "77c38495b75c9eef1a85ea83c3da1220b14fee091db9ca0f05f2575831e419d3"
+      url "https://github.com/caarlos0/kubectx/releases/download/v0.9.3/kubectx_v0.9.3_linux_x86_64.tar.gz"
+      sha256 "472c8b1d3c82652403406d708c9cc8946c7e7202547df12585af71f4b8f3afc8"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/caarlos0/kubectx/releases/download/v0.9.2/kubectx_v0.9.2_linux_arm64.tar.gz"
-        sha256 "85717ad37e29e167f0c199a8693e9638a5de0bc5b618f655431bf59f2135e916"
+        url "https://github.com/caarlos0/kubectx/releases/download/v0.9.3/kubectx_v0.9.3_linux_arm64.tar.gz"
+        sha256 "414e08eef65eb965caac22fccea780853d9f96b18dc25ea342555596ce9b4bd9"
       else
-        url "https://github.com/caarlos0/kubectx/releases/download/v0.9.2/kubectx_v0.9.2_linux_armhf.tar.gz"
-        sha256 "a30bc73f9393ea2f0a6f943a62c2c1c631dd0f68e255c764aa995f82ad501f55"
+        url "https://github.com/caarlos0/kubectx/releases/download/v0.9.3/kubectx_v0.9.3_linux_armhf.tar.gz"
+        sha256 "2d39f4dd013a5e2b25ff88856d135ba546d5b462c080e1b6b418a0ef0a99136a"
       end
     end
   end
@@ -27,5 +27,11 @@ class Kubectx < Formula
   def install
     bin.install "kubens"
     bin.install "kubectx"
+    bash_completion.install "completion/kubectx.bash" => "kubectx"
+    bash_completion.install "completion/kubens.bash" => "kubens"
+    zsh_completion.install "completion/kubectx.zsh" => "_kubectx"
+    zsh_completion.install "completion/kubens.zsh" => "_kubens"
+    fish_completion.install "completion/kubectx.fish"
+    fish_completion.install "completion/kubens.fish"
   end
 end
