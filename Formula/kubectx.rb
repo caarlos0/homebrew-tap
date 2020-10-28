@@ -2,24 +2,24 @@
 class Kubectx < Formula
   desc "kubectx and kubens are power tools for kubectl"
   homepage "https://kubectx.dev"
-  version "0.9.3"
+  version "0.9.4"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/caarlos0/kubectx/releases/download/v0.9.3/kubectx_v0.9.3_darwin_x86_64.tar.gz"
-    sha256 "df81dd2ebe0890a6a99fa03e42fcd7492a0d0161031628eacb156c84114e078a"
+    url "https://github.com/caarlos0/kubectx/releases/download/v0.9.4/kubectx_v0.9.4_darwin_x86_64.tar.gz"
+    sha256 "df24c1552d9109f03b316f55350447d03d17ff85905e78a9eac9de63c39a6f71"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/caarlos0/kubectx/releases/download/v0.9.3/kubectx_v0.9.3_linux_x86_64.tar.gz"
-      sha256 "472c8b1d3c82652403406d708c9cc8946c7e7202547df12585af71f4b8f3afc8"
+      url "https://github.com/caarlos0/kubectx/releases/download/v0.9.4/kubectx_v0.9.4_linux_x86_64.tar.gz"
+      sha256 "2e98229dbeb9663b969e2ddd8dd3309220a9059c3915215f5cffba68a5db40be"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/caarlos0/kubectx/releases/download/v0.9.3/kubectx_v0.9.3_linux_arm64.tar.gz"
-        sha256 "414e08eef65eb965caac22fccea780853d9f96b18dc25ea342555596ce9b4bd9"
+        url "https://github.com/caarlos0/kubectx/releases/download/v0.9.4/kubectx_v0.9.4_linux_arm64.tar.gz"
+        sha256 "a3b3aa6d79a98012348e4ea344e945d9b33bbd44f980ef3d440d91c0239a659e"
       else
-        url "https://github.com/caarlos0/kubectx/releases/download/v0.9.3/kubectx_v0.9.3_linux_armhf.tar.gz"
-        sha256 "2d39f4dd013a5e2b25ff88856d135ba546d5b462c080e1b6b418a0ef0a99136a"
+        url "https://github.com/caarlos0/kubectx/releases/download/v0.9.4/kubectx_v0.9.4_linux_armhf.tar.gz"
+        sha256 "fff4560b6d5d585f9fa627bf1ed94ddd15ae8a3d79902fe967f9be2d111fb4e9"
       end
     end
   end
