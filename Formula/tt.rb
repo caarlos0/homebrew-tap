@@ -5,20 +5,20 @@
 class Tt < Formula
   desc "Task Timer (tt) is a dead simple TUI task timer."
   homepage "https://github.com/caarlos0/tasktimer"
-  version "1.1.1"
+  version "1.1.2"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/caarlos0/tasktimer/releases/download/v1.1.1/tt_darwin_amd64.tar.gz"
-    sha256 "ccfa5dda4c1f599b0cb6f0d90c872a6a137b4967be43f3c60b2d42e67723e0b0"
+    url "https://github.com/caarlos0/tasktimer/releases/download/v1.1.2/tt_darwin_amd64.tar.gz"
+    sha256 "89ebaa4c714233fd3e26c499667854845d8992b1161c29820d3dcf9b656787b8"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/caarlos0/tasktimer/releases/download/v1.1.1/tt_linux_amd64.tar.gz"
-    sha256 "2f2521ba777031ca2ee318c2061a4f8d26848c6614164785c2988e2e5ec5830f"
+    url "https://github.com/caarlos0/tasktimer/releases/download/v1.1.2/tt_linux_amd64.tar.gz"
+    sha256 "df18a27f23abfde130652e10f66342c98c67af0cf7cec835173849608e91402b"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/caarlos0/tasktimer/releases/download/v1.1.1/tt_linux_arm64.tar.gz"
-    sha256 "a6e9212ca0f49641fec5d3c4ca64c150bb0e372089f19a9af96125d977ceac61"
+    url "https://github.com/caarlos0/tasktimer/releases/download/v1.1.2/tt_linux_arm64.tar.gz"
+    sha256 "f1f55a571c14bad9202b93db3dd72a5156446c390c89cc0c5c6bfffe74d46a4d"
   end
 
   def install
