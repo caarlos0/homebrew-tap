@@ -5,16 +5,16 @@
 class Svu < Formula
   desc ""
   homepage ""
-  version "1.2.1"
+  version "1.3.0"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/caarlos0/svu/releases/download/v1.2.1/svu_1.2.1_darwin_amd64.tar.gz"
-    sha256 "f169ed41eecc4e0bdaf48a6e7772884bec2760b887392034353f887e4da9cbeb"
+    url "https://github.com/caarlos0/svu/releases/download/v1.3.0/svu_1.3.0_darwin_amd64.tar.gz"
+    sha256 "6ff3b0011bcf342bfad3022cb005554ec57df96ca241d29f88dbf983b6a82d6f"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/caarlos0/svu/releases/download/v1.2.1/svu_1.2.1_linux_amd64.tar.gz"
-    sha256 "14044a8116be9e6c21d0b3509f164bacb746187ebdc05408d776d60bac436997"
+    url "https://github.com/caarlos0/svu/releases/download/v1.3.0/svu_1.3.0_linux_amd64.tar.gz"
+    sha256 "41421b28b0bd15f5bad5675fa5521e1acaaf5df175b6b4c8ff5ae275e14a00fa"
   end
 
   def install
