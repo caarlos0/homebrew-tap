@@ -5,24 +5,24 @@
 class TwitterCleaner < Formula
   desc "Automatically delete tweets, retweets, and favorites from your timeline, and, if provided, from your twitter archive as well."
   homepage "https://carlosbecker.com"
-  version "0.4.0"
+  version "0.5.0"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/caarlos0/twitter-cleaner/releases/download/v0.4.0/twitter-cleaner_0.4.0_darwin_amd64.tar.gz"
-    sha256 "f3e600739d7b2057c6afaa52defa3c3040711c6ecd01e060f37b0ab37e3b5ed7"
+    url "https://github.com/caarlos0/twitter-cleaner/releases/download/v0.5.0/twitter-cleaner_0.5.0_darwin_amd64.tar.gz"
+    sha256 "0e8b59a2ccb95965c162d7f45dad2074b8156c6fd5a351395185fc45c92493d5"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/caarlos0/twitter-cleaner/releases/download/v0.4.0/twitter-cleaner_0.4.0_darwin_arm64.tar.gz"
-    sha256 "3845b2a1da2f4f4c494ce5698500dab88da89f256379de7947f7da2382ece711"
+    url "https://github.com/caarlos0/twitter-cleaner/releases/download/v0.5.0/twitter-cleaner_0.5.0_darwin_arm64.tar.gz"
+    sha256 "6e17bd7be4ca5b091c8368ac8c0535cda9e0b8141bb12b800aa3daa6f18a1d61"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/caarlos0/twitter-cleaner/releases/download/v0.4.0/twitter-cleaner_0.4.0_linux_amd64.tar.gz"
-    sha256 "ec91f7693a861ef094d1cdd8c94c7abcef82a8dfdb20093bf08c5642b3690e11"
+    url "https://github.com/caarlos0/twitter-cleaner/releases/download/v0.5.0/twitter-cleaner_0.5.0_linux_amd64.tar.gz"
+    sha256 "2ccb73171a8c196c791ac742248b53953d1343424fa1f18464bef9841ad5439b"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/caarlos0/twitter-cleaner/releases/download/v0.4.0/twitter-cleaner_0.4.0_linux_arm64.tar.gz"
-    sha256 "b0948bac24ffd1a4d6c19eaa171360703db41a6b83e1cfe32409deed087704d6"
+    url "https://github.com/caarlos0/twitter-cleaner/releases/download/v0.5.0/twitter-cleaner_0.5.0_linux_arm64.tar.gz"
+    sha256 "f8ebfe277e453cd62a5fc91c6747d474fbb49cc0ba5b6a94a74b34d42e3157b6"
   end
 
   def install
