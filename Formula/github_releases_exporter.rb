@@ -5,24 +5,24 @@
 class GithubReleasesExporter < Formula
   desc "Exports GitHub release metrics to the Prometheus format"
   homepage ""
-  version "1.5.0"
+  version "1.6.0"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/caarlos0/github_releases_exporter/releases/download/v1.5.0/github_releases_exporter_darwin_amd64.tar.gz"
-    sha256 "16f348e857eddef30ea29c6f95c60b6b6a733389dd775dfd0f17db7f722d6690"
+    url "https://github.com/caarlos0/github_releases_exporter/releases/download/v1.6.0/github_releases_exporter_darwin_amd64.tar.gz"
+    sha256 "45582654bf51a88742bf40db92d8d9d7f1c71320f99b4a24e8645d7700bb83ae"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/caarlos0/github_releases_exporter/releases/download/v1.5.0/github_releases_exporter_darwin_arm64.tar.gz"
-    sha256 "4be2549dea66a0d8a4f4fa6e03f2b927120b056ff1dee8fbdbd394be94bbce7e"
+    url "https://github.com/caarlos0/github_releases_exporter/releases/download/v1.6.0/github_releases_exporter_darwin_arm64.tar.gz"
+    sha256 "61495b265cc9c62a9c944ddf6ba5497fdb21f74d48b7a321de7c91119b65cd2d"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/caarlos0/github_releases_exporter/releases/download/v1.5.0/github_releases_exporter_linux_amd64.tar.gz"
-    sha256 "f2b006779e2760b1d73ba7cb4bb11456a8b5642493f5754d4af79f9cc705e687"
+    url "https://github.com/caarlos0/github_releases_exporter/releases/download/v1.6.0/github_releases_exporter_linux_amd64.tar.gz"
+    sha256 "1631d0486ccc262dd9564c9c603a215f1d6df05bd55148fe5bee33953d90ada5"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/caarlos0/github_releases_exporter/releases/download/v1.5.0/github_releases_exporter_linux_arm64.tar.gz"
-    sha256 "45ba2931c29d4b9335dfa27b469512fc5fd170012742a067fd0d7e24eca50399"
+    url "https://github.com/caarlos0/github_releases_exporter/releases/download/v1.6.0/github_releases_exporter_linux_arm64.tar.gz"
+    sha256 "5660e6ff4d0446942154200756b170e9ea9b73bca61878ead92335214683a481"
   end
 
   def install
