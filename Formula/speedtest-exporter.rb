@@ -5,25 +5,27 @@
 class SpeedtestExporter < Formula
   desc "Exports Speedtest results to the Prometheus format"
   homepage ""
-  version "0.1.0"
+  version "0.2.0"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/caarlos0/speedtest-exporter/releases/download/v0.1.0/speedtest-exporter_darwin_amd64.tar.gz"
-    sha256 "b45e77b1969827770ddeeda5ff4de59a2347135ce4634bdbbe3750e49960666c"
+    url "https://github.com/caarlos0/speedtest-exporter/releases/download/v0.2.0/speedtest-exporter_darwin_amd64.tar.gz"
+    sha256 "77212fe0b0e225da5a1b64ffa9e674349d3b0cf6598f283fbca14844a42325eb"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/caarlos0/speedtest-exporter/releases/download/v0.1.0/speedtest-exporter_darwin_arm64.tar.gz"
-    sha256 "0b9d25a9c1496fb28f04496a29d48e11b97160951f8378a0775ab51bbb7c1b27"
+    url "https://github.com/caarlos0/speedtest-exporter/releases/download/v0.2.0/speedtest-exporter_darwin_arm64.tar.gz"
+    sha256 "9244fdaae59fc3a66213b65a9cd4dd21d0f9ffe996a2918f0764ed58f92c8b1f"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/caarlos0/speedtest-exporter/releases/download/v0.1.0/speedtest-exporter_linux_amd64.tar.gz"
-    sha256 "b19552ab24745a4f3e767386481da92ff8c0d71d19bb5d4ebd41fb7eec015333"
+    url "https://github.com/caarlos0/speedtest-exporter/releases/download/v0.2.0/speedtest-exporter_linux_amd64.tar.gz"
+    sha256 "7420b1cfcbf7291cb46e4f25b7aafdf8b6150587ed753fbde7ce2190bf55b97e"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/caarlos0/speedtest-exporter/releases/download/v0.1.0/speedtest-exporter_linux_arm64.tar.gz"
-    sha256 "e4af7680971b9ddf2a495ee7eb16fc91eb6c9a15fde5b8dd63ccdb445c1a17a2"
+    url "https://github.com/caarlos0/speedtest-exporter/releases/download/v0.2.0/speedtest-exporter_linux_arm64.tar.gz"
+    sha256 "dd4ac4a8224275bdda595900f1c6a513b468775901d36cd6bb7eac76adf8ec9d"
   end
+
+  depends_on "speedtest"
 
   def install
     bin.install "speedtest-exporter"
