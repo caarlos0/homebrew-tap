@@ -5,24 +5,24 @@
 class SpeedtestExporter < Formula
   desc "Exports Speedtest results to the Prometheus format"
   homepage ""
-  version "0.2.0"
+  version "0.3.0"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/caarlos0/speedtest-exporter/releases/download/v0.2.0/speedtest-exporter_darwin_amd64.tar.gz"
-    sha256 "77212fe0b0e225da5a1b64ffa9e674349d3b0cf6598f283fbca14844a42325eb"
+    url "https://github.com/caarlos0/speedtest-exporter/releases/download/v0.3.0/speedtest-exporter_darwin_amd64.tar.gz"
+    sha256 "b8e55dfd87d0fe34a9495336ceba7db78c4915d77812f2979cb057a9ab3a76ed"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/caarlos0/speedtest-exporter/releases/download/v0.2.0/speedtest-exporter_darwin_arm64.tar.gz"
-    sha256 "9244fdaae59fc3a66213b65a9cd4dd21d0f9ffe996a2918f0764ed58f92c8b1f"
+    url "https://github.com/caarlos0/speedtest-exporter/releases/download/v0.3.0/speedtest-exporter_darwin_arm64.tar.gz"
+    sha256 "d698fe30ccd5b71eeffe6d565d2f107def144097a78725f6e027167f3d6f6c08"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/caarlos0/speedtest-exporter/releases/download/v0.2.0/speedtest-exporter_linux_amd64.tar.gz"
-    sha256 "7420b1cfcbf7291cb46e4f25b7aafdf8b6150587ed753fbde7ce2190bf55b97e"
+    url "https://github.com/caarlos0/speedtest-exporter/releases/download/v0.3.0/speedtest-exporter_linux_amd64.tar.gz"
+    sha256 "ced8f5f7cb66eb4fa8496aac18606fa5836373a509dccdfe445de0255140e480"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/caarlos0/speedtest-exporter/releases/download/v0.2.0/speedtest-exporter_linux_arm64.tar.gz"
-    sha256 "dd4ac4a8224275bdda595900f1c6a513b468775901d36cd6bb7eac76adf8ec9d"
+    url "https://github.com/caarlos0/speedtest-exporter/releases/download/v0.3.0/speedtest-exporter_linux_arm64.tar.gz"
+    sha256 "6434d0daca8746f05b3a21541a6f6b1a5b3bc9e9b484c0b6feba5d905cd8115a"
   end
 
   depends_on "speedtest"
