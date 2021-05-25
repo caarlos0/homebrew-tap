@@ -13,4 +13,8 @@ class Test < Formula
   def caveats
     "Test formula, dont use it. It doesnt do anything"
   end
+  
+  on_macos do
+    depends_on arch: [:aarch64]
+  end
 end
