@@ -14,6 +14,8 @@ class Test < Formula
     "Test formula, dont use it. It doesnt do anything"
   end
   
+  depends_on [:linux, :macos]
+  
   on_macos do
     depends_on arch: [:aarch64]
   end
