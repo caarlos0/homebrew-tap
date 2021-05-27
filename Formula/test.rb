@@ -19,4 +19,8 @@ class Test < Formula
   on_macos do
     depends_on arch: [:aarch64]
   end
+  
+  on_linux do
+    depends_on arch: [:x86_64]
+  end
 end
