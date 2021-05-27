@@ -17,7 +17,7 @@ class Test < Formula
   depends_on [:linux, :macos]
   
   on_macos do
-    depends_on arch: [:aarch64]
+    depends_on arch: [:aarch64, :x86_64]
   end
   
   on_linux do
