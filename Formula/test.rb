@@ -5,18 +5,18 @@
 class Test < Formula
   desc ""
   homepage ""
-  version "26.1.0"
+  version "26.2.1"
   bottle :unneeded
   depends_on :linux
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/caarlos0-graveyard/test/releases/download/v26.1.0/test_26.1.0_linux_amd64.tar.gz"
-      sha256 "d7d4ac32fef1914f2d7ff5e69ee37fc532710d49a6e1615d931080741e7f3248"
+      url "https://github.com/caarlos0-graveyard/test/releases/download/v26.2.1/test_26.2.1_linux_amd64.tar.gz"
+      sha256 "d58e3a5e781738457e6485338c32111b1e21cfed255bb4f3bcad243fcd14851b"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/caarlos0-graveyard/test/releases/download/v26.1.0/test_26.1.0_linux_arm64.tar.gz"
-      sha256 "0e34e1add54012133c8eae32bfa3edffcac31697fc14c926ae12c436c9d722e3"
+      url "https://github.com/caarlos0-graveyard/test/releases/download/v26.2.1/test_26.2.1_linux_arm64.tar.gz"
+      sha256 "9cb62ddf4aa5991daf767650e1d51c85ae5935442fd860d2a97330dfe663dbf6"
     end
   end
 
