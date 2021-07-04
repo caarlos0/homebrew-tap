@@ -5,28 +5,28 @@
 class Test < Formula
   desc ""
   homepage ""
-  version "26.3.0"
+  version "26.3.1"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/caarlos0-graveyard/test/releases/download/v26.3.0/test_26.3.0_darwin_amd64.tar.gz"
-      sha256 "b31d147b94c133d05539f42c02daba8f3aa4fc12b687138c3cc30f194e502050"
+      url "https://github.com/caarlos0-graveyard/test/releases/download/v26.3.1/test_26.3.1_darwin_amd64.tar.gz"
+      sha256 "e6677924767613b00e6fbcb20840521b5685657e2e539b19e55cf73177b248e2"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/caarlos0-graveyard/test/releases/download/v26.3.0/test_26.3.0_darwin_arm64.tar.gz"
-      sha256 "2a444cbadd14ab47276f024a80673908b77b4d84898a5059c1ce09e6c034ea67"
+      url "https://github.com/caarlos0-graveyard/test/releases/download/v26.3.1/test_26.3.1_darwin_arm64.tar.gz"
+      sha256 "26b77f037ebcf6d3ba51b61e466f55ffba954f51f2f9f7dc567f1532ef59795a"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/caarlos0-graveyard/test/releases/download/v26.3.0/test_26.3.0_linux_amd64.tar.gz"
-      sha256 "06d877d53ac6a9394f12e2d375b778dba0fbb045be18e77a2414e4dc0c273b00"
+      url "https://github.com/caarlos0-graveyard/test/releases/download/v26.3.1/test_26.3.1_linux_amd64.tar.gz"
+      sha256 "b37569dbbe723661509f77f37e49fd5eb969b12c38ca580fbf1bf386c885aad7"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/caarlos0-graveyard/test/releases/download/v26.3.0/test_26.3.0_linux_arm64.tar.gz"
-      sha256 "c5d85e6d91ac59960a5591ed6270a9da54b3f03cf839b53250a40bb4d9d2524d"
+      url "https://github.com/caarlos0-graveyard/test/releases/download/v26.3.1/test_26.3.1_linux_arm64.tar.gz"
+      sha256 "9fe29e5f9421dfe2ee196cfd187547033005bf4cb372ce074e6da90eb818b570"
     end
   end
 
