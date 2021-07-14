@@ -5,32 +5,35 @@
 class OrgStats < Formula
   desc "Get the contributor stats summary from all repos of any given organization"
   homepage "https://github.com/caarlos0/org-stats"
-  version "1.6.0"
+  version "1.7.0"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/caarlos0/org-stats/releases/download/v1.6.0/org-stats_1.6.0_darwin_amd64.tar.gz"
-      sha256 "f380627264bd7e0d01c357a3421c34fa415d7631eac015a8941836ccecc790fa"
+      url "https://github.com/caarlos0/org-stats/releases/download/v1.7.0/org-stats_darwin_amd64.tar.gz"
+      sha256 "fe384731082e9db2a81ee40f76421d6190371ca28fc757c8059c15b5a13063af"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/caarlos0/org-stats/releases/download/v1.6.0/org-stats_1.6.0_darwin_arm64.tar.gz"
-      sha256 "697936a7344ec26c815f3afe61c1c04543eb32590676b6f9a02d41c34af574a5"
+      url "https://github.com/caarlos0/org-stats/releases/download/v1.7.0/org-stats_darwin_arm64.tar.gz"
+      sha256 "7d876a2338c683c4055231e30602112d535e3928e3510bc41b307afb3a2afaae"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/caarlos0/org-stats/releases/download/v1.6.0/org-stats_1.6.0_linux_amd64.tar.gz"
-      sha256 "7a5e70248647b84a9f6a3396636ab9fd555a3f5f5037cfc06c787a47df2c0d9e"
+      url "https://github.com/caarlos0/org-stats/releases/download/v1.7.0/org-stats_linux_amd64.tar.gz"
+      sha256 "46addc5ab929b1ab51e2c704112374505a9a12e38cef7699440a5cfffd23cf2f"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/caarlos0/org-stats/releases/download/v1.6.0/org-stats_1.6.0_linux_arm64.tar.gz"
-      sha256 "96c6ab3f0f616088f9048302770e2a9ca855d8f75c8f96110668babb25a642c2"
+      url "https://github.com/caarlos0/org-stats/releases/download/v1.7.0/org-stats_linux_arm64.tar.gz"
+      sha256 "09140af64e7ec41a152a2ee03c50a0e7aaeb28254db917d6be98c5bde3a9f04e"
     end
   end
 
   def install
     bin.install "org-stats"
+    bash_completion.install "completions/org-stats.bash" => "org-stats"
+    zsh_completion.install "completions/org-stats.zsh" => "_org-stats"
+    fish_completion.install "completions/org-stats.fish"
   end
 end
