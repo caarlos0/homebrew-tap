@@ -5,28 +5,28 @@
 class FastcomExporter < Formula
   desc "Exports Fast.com results to the Prometheus format"
   homepage "https://github.com/caarlos0/fastcom-exporter"
-  version "1.2.0"
+  version "1.2.1"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/caarlos0/fastcom-exporter/releases/download/v1.2.0/fastcom-exporter_1.2.0_darwin_amd64.tar.gz"
-      sha256 "caaf021c15226d8793da5687511e217ace5bbd09aeb4d4ce008de444b83daba4"
+      url "https://github.com/caarlos0/fastcom-exporter/releases/download/v1.2.1/fastcom-exporter_1.2.1_darwin_amd64.tar.gz"
+      sha256 "5fb4e41dc5a1cf25a84480d97ac906a57f6b47789c9612d00a34ece402260f22"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/caarlos0/fastcom-exporter/releases/download/v1.2.0/fastcom-exporter_1.2.0_darwin_arm64.tar.gz"
-      sha256 "2d5fb4d55aa681af544514060255047c8d475c687de9838c513d65efc286eae4"
+      url "https://github.com/caarlos0/fastcom-exporter/releases/download/v1.2.1/fastcom-exporter_1.2.1_darwin_arm64.tar.gz"
+      sha256 "f25d8e427b2bbbd56bee958d5341e5ad324e9959f061449f5ac02c97ddb6bb6a"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/caarlos0/fastcom-exporter/releases/download/v1.2.0/fastcom-exporter_1.2.0_linux_amd64.tar.gz"
-      sha256 "1a1592d784996b2f228ccef743f40770e58eb62eb38e16996b018a9db529de72"
+      url "https://github.com/caarlos0/fastcom-exporter/releases/download/v1.2.1/fastcom-exporter_1.2.1_linux_amd64.tar.gz"
+      sha256 "a9be112f7c77ff7dcca4beffd683ec22b8318fe088f1e76ed94e835eaa1c35ab"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/caarlos0/fastcom-exporter/releases/download/v1.2.0/fastcom-exporter_1.2.0_linux_arm64.tar.gz"
-      sha256 "2408e255e4dcc2a27122c58054ab41287b6997723e4591ba529aa6101e7df9e9"
+      url "https://github.com/caarlos0/fastcom-exporter/releases/download/v1.2.1/fastcom-exporter_1.2.1_linux_arm64.tar.gz"
+      sha256 "65a0f439bb45814654ada8757c01f95b430e394f75895f9925faefbbefd4235d"
     end
   end
 
