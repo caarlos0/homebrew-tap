@@ -5,28 +5,28 @@
 class FastcomExporter < Formula
   desc "Exports Fast.com results to the Prometheus format"
   homepage "https://github.com/caarlos0/fastcom-exporter"
-  version "1.2.1"
+  version "1.2.2"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/caarlos0/fastcom-exporter/releases/download/v1.2.1/fastcom-exporter_1.2.1_darwin_amd64.tar.gz"
-      sha256 "5fb4e41dc5a1cf25a84480d97ac906a57f6b47789c9612d00a34ece402260f22"
+      url "https://github.com/caarlos0/fastcom-exporter/releases/download/v1.2.2/fastcom-exporter_1.2.2_darwin_amd64.tar.gz"
+      sha256 "97e4fe5b1a737d568d90b0a6887fa2afa36d206bf31b89ad33bfd902e5bc7406"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/caarlos0/fastcom-exporter/releases/download/v1.2.1/fastcom-exporter_1.2.1_darwin_arm64.tar.gz"
-      sha256 "f25d8e427b2bbbd56bee958d5341e5ad324e9959f061449f5ac02c97ddb6bb6a"
+      url "https://github.com/caarlos0/fastcom-exporter/releases/download/v1.2.2/fastcom-exporter_1.2.2_darwin_arm64.tar.gz"
+      sha256 "6ea714e11e5aaee3d4bf61c8487afe99bf41d64352235cdc8a3f702f335c7923"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/caarlos0/fastcom-exporter/releases/download/v1.2.1/fastcom-exporter_1.2.1_linux_amd64.tar.gz"
-      sha256 "a9be112f7c77ff7dcca4beffd683ec22b8318fe088f1e76ed94e835eaa1c35ab"
+      url "https://github.com/caarlos0/fastcom-exporter/releases/download/v1.2.2/fastcom-exporter_1.2.2_linux_amd64.tar.gz"
+      sha256 "89325a87716a4caacb7d51d17a498e98d2bb8387beb09814a81787fe339722da"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/caarlos0/fastcom-exporter/releases/download/v1.2.1/fastcom-exporter_1.2.1_linux_arm64.tar.gz"
-      sha256 "65a0f439bb45814654ada8757c01f95b430e394f75895f9925faefbbefd4235d"
+      url "https://github.com/caarlos0/fastcom-exporter/releases/download/v1.2.2/fastcom-exporter_1.2.2_linux_arm64.tar.gz"
+      sha256 "c8f9e692f506d6069749f403ea2d9ac8618cc0b7a3a8f7f47201ef271d6f37f9"
     end
   end
 
