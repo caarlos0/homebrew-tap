@@ -5,32 +5,30 @@
 class FastcomExporter < Formula
   desc "Exports Fast.com results to the Prometheus format"
   homepage "https://github.com/caarlos0/fastcom-exporter"
-  version "1.2.2"
+  version "1.3.0"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/caarlos0/fastcom-exporter/releases/download/v1.2.2/fastcom-exporter_1.2.2_darwin_amd64.tar.gz"
-      sha256 "97e4fe5b1a737d568d90b0a6887fa2afa36d206bf31b89ad33bfd902e5bc7406"
+      url "https://github.com/caarlos0/fastcom-exporter/releases/download/v1.3.0/fastcom-exporter_1.3.0_darwin_amd64.tar.gz"
+      sha256 "31b26feb568c535d83a30b000c5167060527c204d871bf0295448a75e861ae6b"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/caarlos0/fastcom-exporter/releases/download/v1.2.2/fastcom-exporter_1.2.2_darwin_arm64.tar.gz"
-      sha256 "6ea714e11e5aaee3d4bf61c8487afe99bf41d64352235cdc8a3f702f335c7923"
+      url "https://github.com/caarlos0/fastcom-exporter/releases/download/v1.3.0/fastcom-exporter_1.3.0_darwin_arm64.tar.gz"
+      sha256 "d31e48604d418faa26cb147526af34e70b5b4daa906c5664e2fc50cefc35a87f"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/caarlos0/fastcom-exporter/releases/download/v1.2.2/fastcom-exporter_1.2.2_linux_amd64.tar.gz"
-      sha256 "89325a87716a4caacb7d51d17a498e98d2bb8387beb09814a81787fe339722da"
+      url "https://github.com/caarlos0/fastcom-exporter/releases/download/v1.3.0/fastcom-exporter_1.3.0_linux_amd64.tar.gz"
+      sha256 "497caad759fcf3e623571307d6287de40319c229e7d121636b50cab609bce800"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/caarlos0/fastcom-exporter/releases/download/v1.2.2/fastcom-exporter_1.2.2_linux_arm64.tar.gz"
-      sha256 "c8f9e692f506d6069749f403ea2d9ac8618cc0b7a3a8f7f47201ef271d6f37f9"
+      url "https://github.com/caarlos0/fastcom-exporter/releases/download/v1.3.0/fastcom-exporter_1.3.0_linux_arm64.tar.gz"
+      sha256 "52d544012ff240e054e35b4c804d186c9ea3af5b0b5cf2a16df421d59ab39263"
     end
   end
-
-  depends_on "speedtest"
 
   def install
     bin.install "fastcom-exporter"
