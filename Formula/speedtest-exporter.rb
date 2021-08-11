@@ -5,28 +5,28 @@
 class SpeedtestExporter < Formula
   desc "Exports Speedtest results to the Prometheus format"
   homepage "https://github.com/caarlos0/speedtest-exporter"
-  version "1.0.0"
+  version "1.1.0"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/caarlos0/speedtest-exporter/releases/download/v1.0.0/speedtest-exporter_1.0.0_darwin_amd64.tar.gz"
-      sha256 "2b9021e1a990702101b5e7de2f00e9b3f4f8fc71dfb6ff13a5d365259dc22f92"
+      url "https://github.com/caarlos0/speedtest-exporter/releases/download/v1.1.0/speedtest-exporter_1.1.0_darwin_amd64.tar.gz"
+      sha256 "47a4881a5734066e34aab8501958b4d08b7e2a99810f6bb83ba845623d7af259"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/caarlos0/speedtest-exporter/releases/download/v1.0.0/speedtest-exporter_1.0.0_darwin_arm64.tar.gz"
-      sha256 "406218fcad4d5793428127a7e2d336fb07121bed28fcd20a5a0df0ccd9a1e342"
+      url "https://github.com/caarlos0/speedtest-exporter/releases/download/v1.1.0/speedtest-exporter_1.1.0_darwin_arm64.tar.gz"
+      sha256 "93926e59c0e5160ef11fb33acc0a45fc518c9f3460750f049f6ca664b3708b34"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/caarlos0/speedtest-exporter/releases/download/v1.0.0/speedtest-exporter_1.0.0_linux_amd64.tar.gz"
-      sha256 "8257c874d80de9a7c1cd3c70ba164103c02c8e861ffaa171acb43af83af0ace6"
+      url "https://github.com/caarlos0/speedtest-exporter/releases/download/v1.1.0/speedtest-exporter_1.1.0_linux_amd64.tar.gz"
+      sha256 "a729408e9379ff3ed8749c62abec22ab00fe2f5bde5a4ff09c3229d34c836c28"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/caarlos0/speedtest-exporter/releases/download/v1.0.0/speedtest-exporter_1.0.0_linux_arm64.tar.gz"
-      sha256 "eee8ca6fcee7de8c0155c57edaf7c9cee026c3703ac460c7857a547e9973db80"
+      url "https://github.com/caarlos0/speedtest-exporter/releases/download/v1.1.0/speedtest-exporter_1.1.0_linux_arm64.tar.gz"
+      sha256 "35db48101538bc4d0a74483ba5d39ba79a72e1db6dc7a459b267b2a0ccd9cbd7"
     end
   end
 
