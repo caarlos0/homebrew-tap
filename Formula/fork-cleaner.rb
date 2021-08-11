@@ -5,24 +5,28 @@
 class ForkCleaner < Formula
   desc "Cleans up old and inactive forks on your github account."
   homepage "https://github.com/caarlos0/fork-cleaner"
-  version "2.1.0"
+  version "2.2.0"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/caarlos0/fork-cleaner/releases/download/v2.1.0/fork-cleaner_2.1.0_darwin_amd64.tar.gz"
-      sha256 "61c4c48132fb53ffc66181715080c485c16741140dd7d82bf883b151736ea8c0"
+      url "https://github.com/caarlos0/fork-cleaner/releases/download/v2.2.0/fork-cleaner_2.2.0_darwin_amd64.tar.gz"
+      sha256 "f25484eda02a5cdb066425fbe65bec9a68fc9809c70c3684e80ac167cad2b30b"
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/caarlos0/fork-cleaner/releases/download/v2.2.0/fork-cleaner_2.2.0_darwin_arm64.tar.gz"
+      sha256 "c3cd3fb647e79e6f763225c62e97a446742629d5c42dce30a5d9ab8fb50d12e3"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/caarlos0/fork-cleaner/releases/download/v2.1.0/fork-cleaner_2.1.0_linux_amd64.tar.gz"
-      sha256 "2c1e4e861e69f1f9ffa17f3b729daf53e063b9e46e0992fccb2213315d92bccd"
+      url "https://github.com/caarlos0/fork-cleaner/releases/download/v2.2.0/fork-cleaner_2.2.0_linux_amd64.tar.gz"
+      sha256 "c3c16c4a8a1de730cb8dd73697b75f12686e3082548462dcbabcbb1418314d0d"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/caarlos0/fork-cleaner/releases/download/v2.1.0/fork-cleaner_2.1.0_linux_arm64.tar.gz"
-      sha256 "50ba0628d4f1292eee52365f660a29810270a5efa436839eca9046a27246dde6"
+      url "https://github.com/caarlos0/fork-cleaner/releases/download/v2.2.0/fork-cleaner_2.2.0_linux_arm64.tar.gz"
+      sha256 "da5bf0b4cecc545061c81957f2256886d0bdfbe8d420b7bd29372bffa0089aff"
     end
   end
 
