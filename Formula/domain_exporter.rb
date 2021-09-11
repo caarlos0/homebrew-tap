@@ -5,28 +5,28 @@
 class DomainExporter < Formula
   desc "Exports the expiration time of your domains in the Prometheus format."
   homepage "https://github.com/caarlos0/domain_exporter"
-  version "1.13.0"
+  version "1.14.0"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/caarlos0/domain_exporter/releases/download/v1.13.0/domain_exporter_1.13.0_darwin_amd64.tar.gz"
-      sha256 "728d5950973915962eef956cce834af5bfdbc246d54e1901acadc33bfe301fbf"
+      url "https://github.com/caarlos0/domain_exporter/releases/download/v1.14.0/domain_exporter_1.14.0_darwin_amd64.tar.gz"
+      sha256 "3c17d83ecc8786b5017659b19a52535856f171a3c8abf1302fbeafd50f33d555"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/caarlos0/domain_exporter/releases/download/v1.13.0/domain_exporter_1.13.0_darwin_arm64.tar.gz"
-      sha256 "6754d503f6154507925003de4cbf73dd389f703be19a9cf78db723aa6f2e3272"
+      url "https://github.com/caarlos0/domain_exporter/releases/download/v1.14.0/domain_exporter_1.14.0_darwin_arm64.tar.gz"
+      sha256 "db5a024c8517c0e1aeefe40504f520e0bdfa717cc5c483c40a9cc2db66ba4212"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/caarlos0/domain_exporter/releases/download/v1.13.0/domain_exporter_1.13.0_linux_amd64.tar.gz"
-      sha256 "eef1888fe3e8d568fea4735857ec279a143231d92ed5e2baca87f6a53c6ffb26"
+      url "https://github.com/caarlos0/domain_exporter/releases/download/v1.14.0/domain_exporter_1.14.0_linux_amd64.tar.gz"
+      sha256 "6deeb83d41adabe4cd17d6109a3b28e3d90085fbb6a898e4733b071ca024b0eb"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/caarlos0/domain_exporter/releases/download/v1.13.0/domain_exporter_1.13.0_linux_arm64.tar.gz"
-      sha256 "9973df598d18512b0f824085a404f807ad263d2c27901581ca9369a08d7a4e78"
+      url "https://github.com/caarlos0/domain_exporter/releases/download/v1.14.0/domain_exporter_1.14.0_linux_arm64.tar.gz"
+      sha256 "1b973db1112b690c2aaae0d6d86f32587df058af5a875dfab66c6b1fdfec4a6b"
     end
   end
 
