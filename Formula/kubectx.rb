@@ -5,28 +5,18 @@
 class Kubectx < Formula
   desc "kubectx and kubens are power tools for kubectl"
   homepage "https://kubectx.dev"
-  version "0.10.1"
+  version "0.10.2"
   bottle :unneeded
+  depends_on :macos
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/caarlos0/kubectx/releases/download/v0.10.1/kubectx_v0.10.1_darwin_amd64.tar.gz"
-      sha256 "566262c5009bd305fcf852d475964a8c56ad72cc065b5c6e2e7928dfef2b02e0"
+      url "https://github.com/caarlos0/kubectx/releases/download/v0.10.2/kubectx_v0.10.2_darwin_amd64.tar.gz"
+      sha256 "ac323ca07f03596c68c53f7f842f9d1954f0e2fc2ff9482105e79f2571985368"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/caarlos0/kubectx/releases/download/v0.10.1/kubectx_v0.10.1_darwin_arm64.tar.gz"
-      sha256 "b0196851c196533d4235fcac246f98e60eb2369fcf876d06da9a967af245ab6e"
-    end
-  end
-
-  on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/caarlos0/kubectx/releases/download/v0.10.1/kubectx_v0.10.1_linux_amd64.tar.gz"
-      sha256 "8eba3a77a958fbb74c1eae136ccd64b91bb2870e957a33d4c611d9e730f0689c"
-    end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/caarlos0/kubectx/releases/download/v0.10.1/kubectx_v0.10.1_linux_arm64.tar.gz"
-      sha256 "4f0d3d7ac3a240354c43080b5f5c1d695d7e2e96f72fcb2afc88c4b6e1181d0a"
+      url "https://github.com/caarlos0/kubectx/releases/download/v0.10.2/kubectx_v0.10.2_darwin_arm64.tar.gz"
+      sha256 "1b3f0bed28d586849b675daf04e31fdfab00b780fc20e56c70e24aa6a87c88d8"
     end
   end
 
