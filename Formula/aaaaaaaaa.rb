@@ -5,20 +5,20 @@
 class Aaaaaaaaa < Formula
   desc ""
   homepage ""
-  version "24.3.2"
+  version "24.3.3"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/caarlos0-graveyard/test/releases/download/v24.3.2/aaaaaaaaa_24.3.2_darwin_amd64.tar.gz"
-      sha256 "1f2f648378226e5736309fd30b93e5e1b181014a97cc168340991638626bda04"
+      url "https://github.com/caarlos0-graveyard/test/releases/download/v24.3.3/aaaaaaaaa_24.3.3_darwin_amd64.tar.gz"
+      sha256 "feb383f39d1a93940287f30ff688a5900959674153b0a9c61e0df5e46ae2ebda"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/caarlos0-graveyard/test/releases/download/v24.3.2/aaaaaaaaa_24.3.2_linux_amd64.tar.gz"
-      sha256 "1f7e3fc8f5f70c8f57ab7e6563dd80768876d80cc13ba02d9aef6c404e2c8199"
+      url "https://github.com/caarlos0-graveyard/test/releases/download/v24.3.3/aaaaaaaaa_24.3.3_linux_amd64.tar.gz"
+      sha256 "d4dba00d324b967d7c653063a62841d103c2ae959f9d307272ab98967e713580"
     end
   end
 
