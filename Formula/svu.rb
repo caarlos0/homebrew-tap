@@ -5,28 +5,28 @@
 class Svu < Formula
   desc "Semantic Version Utility"
   homepage "https://github.com/caarlos0/svu"
-  version "1.7.0"
+  version "1.8.0"
   bottle :unneeded
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/caarlos0/svu/releases/download/v1.7.0/svu_1.7.0_darwin_amd64.tar.gz"
-      sha256 "7f9cb5d69c53eba815704bed87c91245988bee97299f9ee0fc9164527e3d8777"
-    end
     if Hardware::CPU.arm?
-      url "https://github.com/caarlos0/svu/releases/download/v1.7.0/svu_1.7.0_darwin_arm64.tar.gz"
-      sha256 "9777a2c8fbc34ba20458bb5f6ca9ea4c8658d21c8a24b9e385571d5a406fff4d"
+      url "https://github.com/caarlos0/svu/releases/download/v1.8.0/svu_1.8.0_darwin_arm64.tar.gz"
+      sha256 "9aa510f6e630aa2f33467e234f064947148c8a7f5a47d18f14f680b3acfccdd9"
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/caarlos0/svu/releases/download/v1.8.0/svu_1.8.0_darwin_amd64.tar.gz"
+      sha256 "64aaf972522846dfde706204aadfd9f3195ee6c6e2e62aec294b95ac49902c0d"
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/caarlos0/svu/releases/download/v1.7.0/svu_1.7.0_linux_amd64.tar.gz"
-      sha256 "e192c3d011f638e4a000ba5d3880d92e7b1164669d4eec8ce9e6dd84f44a3106"
-    end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/caarlos0/svu/releases/download/v1.7.0/svu_1.7.0_linux_arm64.tar.gz"
-      sha256 "d96120800f0923cc50d3e51c274b691fcbc1d7f01b51636d2593c6fa896d581c"
+      url "https://github.com/caarlos0/svu/releases/download/v1.8.0/svu_1.8.0_linux_arm64.tar.gz"
+      sha256 "048be8ca7c0edc8ad9b666c849323a3b6d821a3ab5174aad381f77db4cde061d"
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/caarlos0/svu/releases/download/v1.8.0/svu_1.8.0_linux_amd64.tar.gz"
+      sha256 "5d1d3544ec6042c29cb9623247a1284194cabd7c1445d1bc144046d3c1cf6572"
     end
   end
 
