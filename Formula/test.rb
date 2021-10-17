@@ -5,32 +5,39 @@
 class Test < Formula
   desc ""
   homepage ""
-  version "26.3.1"
+  version "27.1.2"
   bottle :unneeded
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/caarlos0-graveyard/test/releases/download/v26.3.1/test_26.3.1_darwin_amd64.tar.gz"
-      sha256 "e6677924767613b00e6fbcb20840521b5685657e2e539b19e55cf73177b248e2"
-    end
-    if Hardware::CPU.arm?
-      url "https://github.com/caarlos0-graveyard/test/releases/download/v26.3.1/test_26.3.1_darwin_arm64.tar.gz"
-      sha256 "26b77f037ebcf6d3ba51b61e466f55ffba954f51f2f9f7dc567f1532ef59795a"
+    url "https://github.com/caarlos0-graveyard/test/releases/download/v27.1.2/test_27.1.2_darwin_all"
+    sha256 "8e1e9764d7e8927c0199b323b185b72a601fe922d2834caeb0a592f6fafc6700"
+
+    def install
+      bin.install "test_27.1.2_darwin_all" => "test"
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/caarlos0-graveyard/test/releases/download/v26.3.1/test_26.3.1_linux_amd64.tar.gz"
-      sha256 "b37569dbbe723661509f77f37e49fd5eb969b12c38ca580fbf1bf386c885aad7"
-    end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/caarlos0-graveyard/test/releases/download/v26.3.1/test_26.3.1_linux_arm64.tar.gz"
-      sha256 "9fe29e5f9421dfe2ee196cfd187547033005bf4cb372ce074e6da90eb818b570"
+      url "https://github.com/caarlos0-graveyard/test/releases/download/v27.1.2/test_27.1.2_linux_arm64"
+      sha256 "797f93a018f3fd2db9ea78b90f002685840154a750a0a891055b89363e7b7275"
+
+      def install
+        bin.install "test_27.1.2_linux_arm64" => "test"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/caarlos0-graveyard/test/releases/download/v27.1.2/test_27.1.2_linux_amd64"
+      sha256 "bbbf74a089d0b3af37eae5125b2310031f9b6774370a53fdce0b7e9bc1e17ae1"
+
+      def install
+        bin.install "test_27.1.2_linux_amd64" => "test"
+      end
     end
   end
 
-  def install
-    bin.install "test"
+  def caveats; <<~EOS
+    Test formula, dont use it. It doesnt do anything
+  EOS
   end
 end
