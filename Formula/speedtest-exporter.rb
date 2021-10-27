@@ -6,7 +6,6 @@ class SpeedtestExporter < Formula
   desc "Exports Speedtest results to the Prometheus format"
   homepage "https://github.com/caarlos0/speedtest-exporter"
   version "1.1.4"
-  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?

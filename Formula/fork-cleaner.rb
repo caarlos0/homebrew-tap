@@ -6,7 +6,6 @@ class ForkCleaner < Formula
   desc "Cleans up old and inactive forks on your github account."
   homepage "https://github.com/caarlos0/fork-cleaner"
   version "2.2.1"
-  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?

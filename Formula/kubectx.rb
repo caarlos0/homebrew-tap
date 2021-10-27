@@ -6,7 +6,6 @@ class Kubectx < Formula
   desc "kubectx and kubens are power tools for kubectl"
   homepage "https://kubectx.dev"
   version "0.10.2"
-  bottle :unneeded
   depends_on :macos
 
   on_macos do

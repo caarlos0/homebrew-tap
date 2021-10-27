@@ -3,7 +3,6 @@ class Shcheck < Formula
   desc ""
   homepage ""
   version "0.5.0"
-  bottle :unneeded
 
   if OS.mac?
     url "https://github.com/caarlos0/shcheck/releases/download/v0.5.0/shcheck_Darwin_x86_64.tar.gz"

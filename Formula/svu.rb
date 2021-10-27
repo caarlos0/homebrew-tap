@@ -6,7 +6,6 @@ class Svu < Formula
   desc "Semantic Version Utility"
   homepage "https://github.com/caarlos0/svu"
   version "1.8.0"
-  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.arm?

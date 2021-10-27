@@ -6,7 +6,6 @@ class Tt < Formula
   desc "Task Timer (tt) is a dead simple TUI task timer"
   homepage "https://github.com/caarlos0/tasktimer"
   version "1.9.0"
-  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?

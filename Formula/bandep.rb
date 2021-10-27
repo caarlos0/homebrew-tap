@@ -3,7 +3,6 @@ class Bandep < Formula
   desc ""
   homepage ""
   version "1.0.0"
-  bottle :unneeded
 
   if OS.mac?
     url "https://github.com/caarlos0/bandep/releases/download/v1.0.0/bandep_1.0.0_darwin_amd64.tar.gz"

@@ -6,7 +6,6 @@ class Jsonfmt < Formula
   desc "Like gofmt, but for JSON files"
   homepage "https://github.com/caarlos0/jsonfmt"
   version "0.3.1"
-  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?

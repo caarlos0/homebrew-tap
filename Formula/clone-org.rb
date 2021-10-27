@@ -6,7 +6,6 @@ class CloneOrg < Formula
   desc "Clone all repos of a GitHub user or organization"
   homepage "https://github.com/caarlos0/clone-org"
   version "1.4.0"
-  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?

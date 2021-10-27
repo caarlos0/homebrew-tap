@@ -6,7 +6,6 @@ class FastcomExporter < Formula
   desc "Exports Fast.com results to the Prometheus format"
   homepage "https://github.com/caarlos0/fastcom-exporter"
   version "1.3.3"
-  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?

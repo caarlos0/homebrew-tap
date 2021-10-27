@@ -6,7 +6,6 @@ class TwitterCleaner < Formula
   desc "Automatically delete tweets, retweets, and favorites from your timeline, and, if provided, from your twitter archive as well."
   homepage "https://github.com/caarlos0/twitter-cleaner"
   version "0.6.0"
-  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?

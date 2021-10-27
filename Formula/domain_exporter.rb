@@ -6,7 +6,6 @@ class DomainExporter < Formula
   desc "Exports the expiration time of your domains in the Prometheus format."
   homepage "https://github.com/caarlos0/domain_exporter"
   version "1.14.0"
-  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?

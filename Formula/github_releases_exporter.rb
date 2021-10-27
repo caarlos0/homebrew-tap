@@ -6,7 +6,6 @@ class GithubReleasesExporter < Formula
   desc "Exports GitHub release metrics to the Prometheus format"
   homepage ""
   version "1.6.0"
-  bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
     url "https://github.com/caarlos0/github_releases_exporter/releases/download/v1.6.0/github_releases_exporter_darwin_amd64.tar.gz"

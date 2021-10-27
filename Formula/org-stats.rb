@@ -6,7 +6,6 @@ class OrgStats < Formula
   desc "Get the contributor stats summary from all repos of any given organization"
   homepage "https://github.com/caarlos0/org-stats"
   version "1.8.0"
-  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
