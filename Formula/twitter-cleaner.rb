@@ -5,31 +5,33 @@
 class TwitterCleaner < Formula
   desc "Automatically delete tweets, retweets, and favorites from your timeline, and, if provided, from your twitter archive as well."
   homepage "https://github.com/caarlos0/twitter-cleaner"
-  version "0.6.0"
+  version "0.7.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/caarlos0/twitter-cleaner/releases/download/v0.6.0/twitter-cleaner_0.6.0_darwin_amd64.tar.gz"
-      sha256 "f389600e36608b9e01e82386caeb8c492f6396371a1186fb4df4a5e85774a0e4"
-    end
-    if Hardware::CPU.arm?
-      url "https://github.com/caarlos0/twitter-cleaner/releases/download/v0.6.0/twitter-cleaner_0.6.0_darwin_arm64.tar.gz"
-      sha256 "1ffb639ad814ac164b79ca011e73713d5e2c09555a758834a0e38320a264c767"
+    url "https://github.com/caarlos0/twitter-cleaner/releases/download/v0.7.0/twitter-cleaner_0.7.0_darwin_all.tar.gz"
+    sha256 "64e02b69b600ce8bfce37c522690590d411c4921a2ec24b2f7243c3de72e9d81"
+
+    def install
+      bin.install "twitter-cleaner"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/caarlos0/twitter-cleaner/releases/download/v0.6.0/twitter-cleaner_0.6.0_linux_amd64.tar.gz"
-      sha256 "df4dbef20dbb5a4bdc0a637ecc1a81715de9d6c4c8d4353dc60749371dbde5aa"
+      url "https://github.com/caarlos0/twitter-cleaner/releases/download/v0.7.0/twitter-cleaner_0.7.0_linux_amd64.tar.gz"
+      sha256 "ee3a0e04b1e32817466102a7fbb9cac26e3327fdcdb3f1d4c5c7613fe04864b6"
+
+      def install
+        bin.install "twitter-cleaner"
+      end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/caarlos0/twitter-cleaner/releases/download/v0.6.0/twitter-cleaner_0.6.0_linux_arm64.tar.gz"
-      sha256 "6bca43a56d95524968c6223770fe48b7a89924b56c8815039631e92adc35521f"
-    end
-  end
+      url "https://github.com/caarlos0/twitter-cleaner/releases/download/v0.7.0/twitter-cleaner_0.7.0_linux_arm64.tar.gz"
+      sha256 "0dd8e6a52c289a9b6e1609b1211cb6a31e1f727d1d8991660e67cbfb45ba4bde"
 
-  def install
-    bin.install "twitter-cleaner"
+      def install
+        bin.install "twitter-cleaner"
+      end
+    end
   end
 end
