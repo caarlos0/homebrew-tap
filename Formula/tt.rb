@@ -5,34 +5,45 @@
 class Tt < Formula
   desc "Task Timer (tt) is a dead simple TUI task timer"
   homepage "https://github.com/caarlos0/tasktimer"
-  version "1.9.0"
+  version "1.9.1"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/caarlos0/tasktimer/releases/download/v1.9.0/tt_darwin_amd64.tar.gz"
-      sha256 "758aad0b474e75aa24ebf0d958ea73f30b261bfdf243056276f764bb6137f4e5"
-    end
-    if Hardware::CPU.arm?
-      url "https://github.com/caarlos0/tasktimer/releases/download/v1.9.0/tt_darwin_arm64.tar.gz"
-      sha256 "2290587ac992d44e9490d4c3eada1a36a31d8a040eeb182f22e25a0328f8665a"
+    url "https://github.com/caarlos0/tasktimer/releases/download/v1.9.1/tt_darwin_all.tar.gz"
+    sha256 "0384325a438e351a715b2278d7733463c57a46a595dbdf63d917de2cc6d8b025"
+
+    def install
+      bin.install "tt"
+      bash_completion.install "completions/tt.bash" => "tt"
+      zsh_completion.install "completions/tt.zsh" => "_tt"
+      fish_completion.install "completions/tt.fish"
+      man1.install "manpages/tt.1.gz"
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/caarlos0/tasktimer/releases/download/v1.9.0/tt_linux_amd64.tar.gz"
-      sha256 "66e7d91d9a6bb3377f4cf11b751fb384484906132b31a1f0088373b2b1c29f96"
-    end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/caarlos0/tasktimer/releases/download/v1.9.0/tt_linux_arm64.tar.gz"
-      sha256 "ab2d652a64c161f2a90bdb7e3682b7cf586f37866fef1ef920db61ee6894236c"
-    end
-  end
+      url "https://github.com/caarlos0/tasktimer/releases/download/v1.9.1/tt_linux_arm64.tar.gz"
+      sha256 "50c97bee7fe2b51f1fbc74eba4914eeaae5014b87e23888fed31a599f7cd88f2"
 
-  def install
-    bin.install "tt"
-    bash_completion.install "completions/tt.bash" => "tt"
-    zsh_completion.install "completions/tt.zsh" => "_tt"
-    fish_completion.install "completions/tt.fish"
+      def install
+        bin.install "tt"
+        bash_completion.install "completions/tt.bash" => "tt"
+        zsh_completion.install "completions/tt.zsh" => "_tt"
+        fish_completion.install "completions/tt.fish"
+        man1.install "manpages/tt.1.gz"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/caarlos0/tasktimer/releases/download/v1.9.1/tt_linux_amd64.tar.gz"
+      sha256 "c242e99709298282ecbf923e2f30578638560d8029f4830e55b607251e3e6327"
+
+      def install
+        bin.install "tt"
+        bash_completion.install "completions/tt.bash" => "tt"
+        zsh_completion.install "completions/tt.zsh" => "_tt"
+        fish_completion.install "completions/tt.fish"
+        man1.install "manpages/tt.1.gz"
+      end
+    end
   end
 end
