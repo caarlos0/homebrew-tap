@@ -5,41 +5,44 @@
 class OrgStats < Formula
   desc "Get the contributor stats summary from all repos of any given organization"
   homepage "https://github.com/caarlos0/org-stats"
-  version "1.9.0"
+  version "1.10.0"
 
   on_macos do
-    url "https://github.com/caarlos0/org-stats/releases/download/v1.9.0/org-stats_darwin_all.tar.gz"
-    sha256 "71ddf8ee19de07684ee8e6b8a209f1d914ad96e473bd7d99091da2e92bbac6f8"
+    url "https://github.com/caarlos0/org-stats/releases/download/v1.10.0/org-stats_darwin_all.tar.gz"
+    sha256 "23424e3d1d5098ec17158c482ab001e9e7f219da78a4090c42504e3d79d99bf4"
 
     def install
       bin.install "org-stats"
       bash_completion.install "completions/org-stats.bash" => "org-stats"
       zsh_completion.install "completions/org-stats.zsh" => "_org-stats"
       fish_completion.install "completions/org-stats.fish"
+      man1.install "manpages/org-stats.1.gz"
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/caarlos0/org-stats/releases/download/v1.9.0/org-stats_linux_amd64.tar.gz"
-      sha256 "7506980e0bffd3e71a18136a9e92f4fedd6b47466c3ea8605965143d338cff23"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/caarlos0/org-stats/releases/download/v1.10.0/org-stats_linux_arm64.tar.gz"
+      sha256 "978bf12b807474d6542e5e5f8261b87c31e9721c42ba567eb55bad4b0499f3a3"
 
       def install
         bin.install "org-stats"
         bash_completion.install "completions/org-stats.bash" => "org-stats"
         zsh_completion.install "completions/org-stats.zsh" => "_org-stats"
         fish_completion.install "completions/org-stats.fish"
+        man1.install "manpages/org-stats.1.gz"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/caarlos0/org-stats/releases/download/v1.9.0/org-stats_linux_arm64.tar.gz"
-      sha256 "f89db19b9a96158d5d182dbeaf6d3d383aba6b4e92b77a722bb5fe99d96ec727"
+    if Hardware::CPU.intel?
+      url "https://github.com/caarlos0/org-stats/releases/download/v1.10.0/org-stats_linux_amd64.tar.gz"
+      sha256 "b989bdafbdf9f947d5025b818ab2c0cd5342a67edfb2b0e4c1ffdae6ed06762e"
 
       def install
         bin.install "org-stats"
         bash_completion.install "completions/org-stats.bash" => "org-stats"
         zsh_completion.install "completions/org-stats.zsh" => "_org-stats"
         fish_completion.install "completions/org-stats.fish"
+        man1.install "manpages/org-stats.1.gz"
       end
     end
   end
