@@ -5,11 +5,11 @@
 class Tt < Formula
   desc "Task Timer (tt) is a dead simple TUI task timer"
   homepage "https://github.com/caarlos0/tasktimer"
-  version "1.9.2"
+  version "1.9.3"
 
   on_macos do
-    url "https://github.com/caarlos0/tasktimer/releases/download/v1.9.2/tt_darwin_all.tar.gz"
-    sha256 "174d50bb3a874b6db7b4f77519b350318ca7aed8a94e975ddd1f931aab3b4c7f"
+    url "https://github.com/caarlos0/tasktimer/releases/download/v1.9.3/tt_darwin_all.tar.gz"
+    sha256 "536bca4023fdce6c11a0602251e3ccd0f19e215cf149481b8adbc43b61c68194"
 
     def install
       bin.install "tt"
@@ -21,9 +21,9 @@ class Tt < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/caarlos0/tasktimer/releases/download/v1.9.2/tt_linux_arm64.tar.gz"
-      sha256 "71ea4e8b7bbf0d81839d0b2066f0919236fa95941e954db3cccf5b7912f4bc78"
+    if Hardware::CPU.intel?
+      url "https://github.com/caarlos0/tasktimer/releases/download/v1.9.3/tt_linux_amd64.tar.gz"
+      sha256 "59670ef84c512131177d53c369224eda8d114d8e75688d1278da46ac467ba122"
 
       def install
         bin.install "tt"
@@ -33,9 +33,9 @@ class Tt < Formula
         man1.install "manpages/tt.1.gz"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/caarlos0/tasktimer/releases/download/v1.9.2/tt_linux_amd64.tar.gz"
-      sha256 "5db0e120cb5ff587f610de0464040e548dc0a7f4915d5b2ee57aa7083b27290e"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/caarlos0/tasktimer/releases/download/v1.9.3/tt_linux_arm64.tar.gz"
+      sha256 "798dad1e9c9ffa3dc1a285317745399243d79756dbdf0b71ff3b3da112b89e06"
 
       def install
         bin.install "tt"
