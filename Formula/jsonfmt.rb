@@ -5,11 +5,11 @@
 class Jsonfmt < Formula
   desc "Like gofmt, but for JSON files"
   homepage "https://github.com/caarlos0/jsonfmt"
-  version "0.4.0"
+  version "0.5.0"
 
   on_macos do
-    url "https://github.com/caarlos0/jsonfmt/releases/download/v0.4.0/jsonfmt_0.4.0_darwin_all.tar.gz"
-    sha256 "dcdadd86577e89a5ccef3b307b0c478bfa9d68752cc9856fc3a61ef42b65467f"
+    url "https://github.com/caarlos0/jsonfmt/releases/download/v0.5.0/jsonfmt_0.5.0_darwin_all.tar.gz"
+    sha256 "83842dc7a345731d1e2d3ff6fd3a6abe61b709fb8e572353309c192989ef7666"
 
     def install
       bin.install "jsonfmt"
@@ -17,17 +17,17 @@ class Jsonfmt < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/caarlos0/jsonfmt/releases/download/v0.4.0/jsonfmt_0.4.0_linux_amd64.tar.gz"
-      sha256 "d846851066955099b608811852f8029ed228aedf9003429a54529c305db9eb81"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/caarlos0/jsonfmt/releases/download/v0.5.0/jsonfmt_0.5.0_linux_arm64.tar.gz"
+      sha256 "1588ca30f2c66f175d9e0c3810c93a686834c4c40976cb1fdcaf88d6f143da4a"
 
       def install
         bin.install "jsonfmt"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/caarlos0/jsonfmt/releases/download/v0.4.0/jsonfmt_0.4.0_linux_arm64.tar.gz"
-      sha256 "181e69519dc1da30abf28115ea4e0523e3ff6ce2e8fe533ad88b2fc7f6000204"
+    if Hardware::CPU.intel?
+      url "https://github.com/caarlos0/jsonfmt/releases/download/v0.5.0/jsonfmt_0.5.0_linux_amd64.tar.gz"
+      sha256 "8fa5df13b0da03af12ef70562f2ecf99765de9f45778b11e4c8eba318a769235"
 
       def install
         bin.install "jsonfmt"
