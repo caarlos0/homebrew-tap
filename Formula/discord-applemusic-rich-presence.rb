@@ -5,21 +5,21 @@
 class DiscordApplemusicRichPresence < Formula
   desc "Apple Music Rich Presence for Discord"
   homepage "https://caarlos0.dev"
-  version "0.2.0"
+  version "0.3.0"
   depends_on :macos
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/caarlos0/discord-applemusic-rich-presence/releases/download/v0.2.0/discord-applemusic-rich-presence_0.2.0_darwin_arm64.tar.gz"
-      sha256 "8ce43028d78b343f2bcad8ddefbfeb8fba72c7a1a26840cfe40c18345e65067e"
+      url "https://github.com/caarlos0/discord-applemusic-rich-presence/releases/download/v0.3.0/discord-applemusic-rich-presence_0.3.0_darwin_arm64.tar.gz"
+      sha256 "65ae8d5a8a38773ce5a00629d576967b2ec661fa25009e4ec94f6c06cecd362d"
 
       def install
         bin.install "discord-applemusic-rich-presence"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/caarlos0/discord-applemusic-rich-presence/releases/download/v0.2.0/discord-applemusic-rich-presence_0.2.0_darwin_amd64.tar.gz"
-      sha256 "edfe3160ed8dc48371934f7d75fdf1592fc51431900183d9496ec9daff3aaaee"
+      url "https://github.com/caarlos0/discord-applemusic-rich-presence/releases/download/v0.3.0/discord-applemusic-rich-presence_0.3.0_darwin_amd64.tar.gz"
+      sha256 "9d97042c3295d2cce3a8961a6470f324828c5b1107cb8b0b6b91059e9b66e67f"
 
       def install
         bin.install "discord-applemusic-rich-presence"
