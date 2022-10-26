@@ -5,21 +5,21 @@
 class DiscordApplemusicRichPresence < Formula
   desc "Apple Music Rich Presence for Discord"
   homepage "https://caarlos0.dev"
-  version "0.1.2"
+  version "0.2.0"
   depends_on :macos
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/caarlos0/discord-applemusic-rich-presence/releases/download/v0.1.2/discord-applemusic-rich-presence_0.1.2_darwin_arm64.tar.gz"
-      sha256 "3aea8ee968415b9bb1d0cb42c9710ece3002538ae0888ac532dbbf4c1d2dee15"
+      url "https://github.com/caarlos0/discord-applemusic-rich-presence/releases/download/v0.2.0/discord-applemusic-rich-presence_0.2.0_darwin_arm64.tar.gz"
+      sha256 "8ce43028d78b343f2bcad8ddefbfeb8fba72c7a1a26840cfe40c18345e65067e"
 
       def install
         bin.install "discord-applemusic-rich-presence"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/caarlos0/discord-applemusic-rich-presence/releases/download/v0.1.2/discord-applemusic-rich-presence_0.1.2_darwin_amd64.tar.gz"
-      sha256 "ac654c543661ba03ca707ffd34d68cac0ad43648698104c2522fa14b19ab0961"
+      url "https://github.com/caarlos0/discord-applemusic-rich-presence/releases/download/v0.2.0/discord-applemusic-rich-presence_0.2.0_darwin_amd64.tar.gz"
+      sha256 "edfe3160ed8dc48371934f7d75fdf1592fc51431900183d9496ec9daff3aaaee"
 
       def install
         bin.install "discord-applemusic-rich-presence"
@@ -27,29 +27,10 @@ class DiscordApplemusicRichPresence < Formula
     end
   end
 
-  plist_options startup: false
-
-  def plist
-    <<~EOS
-      <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-  <dict>
-    <key>Label</key>
-    <string>discord-applemusic-rich-presence</string>
-    <key>ProgramArguments</key>
-    <array>
-      <string>#{bin}/discord-applemusic-rich-presence</string>
-    </array>
-    <key>RunAtLoad</key>
-    <true/>
-    <key>StandardOutPath</key>
-    <string>#{var}/log/discord-applemusic-rich-presence.log</string>
-    <key>StandardErrorPath</key>
-    <string>#{var}/log/discord-applemusic-rich-presence.log</string>
-  </dict>
-</plist>
-
-    EOS
+  service do
+    run [opt_bin/"discord-applemusic-rich-presence"]
+    keep_alive true
+    log_path var/"log/discord-applemusic-rich-presence.log"
+    error_log_path var/"log/discord-applemusic-rich-presence.log"
   end
 end
