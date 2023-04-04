@@ -9,7 +9,7 @@ class Aaaaaaaaa < Formula
 
   on_macos do
     url "https://github.com/caarlos0-graveyard/test/releases/download/v0.5.4/aaaaaaaaa_0.5.4_darwin_amd64.tar.gz"
-    sha256 "6fbd1e4490a15dcb30efd0489e323b7a22f4ce1da2906366d5ee6ae95c73655f"
+    sha256 "760f743366e961564a771de6316aca876eb857b40424997f6acfba62d584585c"
 
     def install
       bin.install "bar"
@@ -31,7 +31,7 @@ class Aaaaaaaaa < Formula
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/caarlos0-graveyard/test/releases/download/v0.5.4/aaaaaaaaa_0.5.4_linux_amd64.tar.gz"
-      sha256 "12184592a8cb593a8d7fbf42d3ee3600fdc96ece80317f82d49a5ee700088b07"
+      sha256 "ba699ca5128417b862f23e8a159814234f2f189595627b652991b521458d1f6c"
 
       def install
         bin.install "bar"
