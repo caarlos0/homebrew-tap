@@ -5,11 +5,11 @@
 class CloneOrg < Formula
   desc "Clone all repos of a GitHub user or organization"
   homepage "https://github.com/caarlos0/clone-org"
-  version "1.5.0"
+  version "1.5.1"
 
   on_macos do
-    url "https://github.com/caarlos0/clone-org/releases/download/v1.5.0/clone-org_1.5.0_darwin_all.tar.gz"
-    sha256 "348e326bb05a1049b1ada7eafe476b4ab9cd62ddb63d01f074d3fb4005043dcb"
+    url "https://github.com/caarlos0/clone-org/releases/download/v1.5.1/clone-org_1.5.1_darwin_all.tar.gz"
+    sha256 "79e4972320c7b53b76e439d2bf2a2cb6bf099891fdad9b499db9ecfb6d54a5ac"
 
     def install
       bin.install "clone-org"
@@ -18,16 +18,16 @@ class CloneOrg < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/caarlos0/clone-org/releases/download/v1.5.0/clone-org_1.5.0_linux_arm64.tar.gz"
-      sha256 "508ab541ca3cc2d257d4797a436c1d0be13d191d9b2f926376ac9f9a20032122"
+      url "https://github.com/caarlos0/clone-org/releases/download/v1.5.1/clone-org_1.5.1_linux_arm64.tar.gz"
+      sha256 "596582ad031498ee3816ada327f2b2aa7a87f4f4486630c89f20bd5577d381ef"
 
       def install
         bin.install "clone-org"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/caarlos0/clone-org/releases/download/v1.5.0/clone-org_1.5.0_linux_amd64.tar.gz"
-      sha256 "82f63c0afb6be5678bcb815da98a6bb03a0f51415436f4255098ffa1a3f5aa52"
+      url "https://github.com/caarlos0/clone-org/releases/download/v1.5.1/clone-org_1.5.1_linux_amd64.tar.gz"
+      sha256 "c0d48f1b4de39ffa87288fe99d345f1bf2a1e173e8a3a1f0c7e1a92f1d77a3e8"
 
       def install
         bin.install "clone-org"
