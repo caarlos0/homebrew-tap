@@ -5,31 +5,33 @@
 class CloneOrg < Formula
   desc "Clone all repos of a GitHub user or organization"
   homepage "https://github.com/caarlos0/clone-org"
-  version "1.4.0"
+  version "1.5.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/caarlos0/clone-org/releases/download/v1.4.0/clone-org_1.4.0_darwin_amd64.tar.gz"
-      sha256 "2bf3223b3bbc30845eef67f05eddbc789db48defe99793467f045ac893517f17"
-    end
-    if Hardware::CPU.arm?
-      url "https://github.com/caarlos0/clone-org/releases/download/v1.4.0/clone-org_1.4.0_darwin_arm64.tar.gz"
-      sha256 "86a2a160b335104ad59c67915d8d26cf0f3d210250d2494e2fcb3dde233e18cd"
+    url "https://github.com/caarlos0/clone-org/releases/download/v1.5.0/clone-org_1.5.0_darwin_all.tar.gz"
+    sha256 "348e326bb05a1049b1ada7eafe476b4ab9cd62ddb63d01f074d3fb4005043dcb"
+
+    def install
+      bin.install "clone-org"
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/caarlos0/clone-org/releases/download/v1.4.0/clone-org_1.4.0_linux_amd64.tar.gz"
-      sha256 "e666ce997def68f9e15947caddbb28ad3754b3e634815b5f9fb86d26dec469c9"
-    end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/caarlos0/clone-org/releases/download/v1.4.0/clone-org_1.4.0_linux_arm64.tar.gz"
-      sha256 "7d0d76eac6f0dd525013d59e856244a4ea34088906a785ab68e7ea1b0291bccb"
-    end
-  end
+      url "https://github.com/caarlos0/clone-org/releases/download/v1.5.0/clone-org_1.5.0_linux_arm64.tar.gz"
+      sha256 "508ab541ca3cc2d257d4797a436c1d0be13d191d9b2f926376ac9f9a20032122"
 
-  def install
-    bin.install "clone-org"
+      def install
+        bin.install "clone-org"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/caarlos0/clone-org/releases/download/v1.5.0/clone-org_1.5.0_linux_amd64.tar.gz"
+      sha256 "82f63c0afb6be5678bcb815da98a6bb03a0f51415436f4255098ffa1a3f5aa52"
+
+      def install
+        bin.install "clone-org"
+      end
+    end
   end
 end
