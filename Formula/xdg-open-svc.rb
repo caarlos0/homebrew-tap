@@ -5,20 +5,20 @@
 class XdgOpenSvc < Formula
   desc "Service to open URLs"
   homepage "https://caarlos0.dev"
-  version "0.1.0"
+  version "0.1.1"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/caarlos0/xdg-open-svc/releases/download/v0.1.0/xdg-open-svc_0.1.0_darwin_arm64.tar.gz"
-      sha256 "3cb20d7101987e5b750b8097661c8d800992ac0829176edc9ebdb101ed6d4708"
+      url "https://github.com/caarlos0/xdg-open-svc/releases/download/v0.1.1/xdg-open-svc_0.1.1_darwin_arm64.tar.gz"
+      sha256 "8ae28696bbc6cd2b4a02ee5150c7e9546030a254661ef884c939ca83057bbabe"
 
       def install
         bin.install "xdg-open-svc"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/caarlos0/xdg-open-svc/releases/download/v0.1.0/xdg-open-svc_0.1.0_darwin_amd64.tar.gz"
-      sha256 "7b534e479213405f46c2d1188e38415a0ef9af3cc85ffe830c0cb7a19294cf6c"
+      url "https://github.com/caarlos0/xdg-open-svc/releases/download/v0.1.1/xdg-open-svc_0.1.1_darwin_amd64.tar.gz"
+      sha256 "2da2891686598f1bd383437270d3861e2957c499fc3cfd3c7caa607d13857879"
 
       def install
         bin.install "xdg-open-svc"
@@ -28,16 +28,16 @@ class XdgOpenSvc < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/caarlos0/xdg-open-svc/releases/download/v0.1.0/xdg-open-svc_0.1.0_linux_arm64.tar.gz"
-      sha256 "1dc7a01d6a764f0f980ea5c34cb02439c18ca0849394cc3d1fe43422c0c92df2"
+      url "https://github.com/caarlos0/xdg-open-svc/releases/download/v0.1.1/xdg-open-svc_0.1.1_linux_arm64.tar.gz"
+      sha256 "4d9056f0243fd74dfecdf50e871da17ca28fcdb6c03cb6e40ae72256b0ec6b0e"
 
       def install
         bin.install "xdg-open-svc"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/caarlos0/xdg-open-svc/releases/download/v0.1.0/xdg-open-svc_0.1.0_linux_amd64.tar.gz"
-      sha256 "f547b5c9794fbcee8c1527cf70a64b503a16a83c87c44c5d83f3e68f546753d1"
+      url "https://github.com/caarlos0/xdg-open-svc/releases/download/v0.1.1/xdg-open-svc_0.1.1_linux_amd64.tar.gz"
+      sha256 "c9cc15f96b9474e190fe013f0526f84899ecffec400d53d4eefba16b00598327"
 
       def install
         bin.install "xdg-open-svc"
