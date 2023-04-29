@@ -5,11 +5,11 @@
 class TwitterCleaner < Formula
   desc "Automatically delete tweets, retweets, and favorites from your timeline, and, if provided, from your twitter archive as well."
   homepage "https://github.com/caarlos0/twitter-cleaner"
-  version "0.7.0"
+  version "0.8.0"
 
   on_macos do
-    url "https://github.com/caarlos0/twitter-cleaner/releases/download/v0.7.0/twitter-cleaner_0.7.0_darwin_all.tar.gz"
-    sha256 "64e02b69b600ce8bfce37c522690590d411c4921a2ec24b2f7243c3de72e9d81"
+    url "https://github.com/caarlos0/twitter-cleaner/releases/download/v0.8.0/twitter-cleaner_0.8.0_darwin_all.tar.gz"
+    sha256 "6bd01a099997b2a97c3dbab17b543bb98be94eac2845bdcb5f5c01f9da542427"
 
     def install
       bin.install "twitter-cleaner"
@@ -17,17 +17,17 @@ class TwitterCleaner < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/caarlos0/twitter-cleaner/releases/download/v0.7.0/twitter-cleaner_0.7.0_linux_amd64.tar.gz"
-      sha256 "ee3a0e04b1e32817466102a7fbb9cac26e3327fdcdb3f1d4c5c7613fe04864b6"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/caarlos0/twitter-cleaner/releases/download/v0.8.0/twitter-cleaner_0.8.0_linux_arm64.tar.gz"
+      sha256 "2f739b909fabde99ff109f8a696693fc86ff1a2155ee2219f3cc894fab2141aa"
 
       def install
         bin.install "twitter-cleaner"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/caarlos0/twitter-cleaner/releases/download/v0.7.0/twitter-cleaner_0.7.0_linux_arm64.tar.gz"
-      sha256 "0dd8e6a52c289a9b6e1609b1211cb6a31e1f727d1d8991660e67cbfb45ba4bde"
+    if Hardware::CPU.intel?
+      url "https://github.com/caarlos0/twitter-cleaner/releases/download/v0.8.0/twitter-cleaner_0.8.0_linux_amd64.tar.gz"
+      sha256 "d6d4ef17234f699a4e5f5c84fa1a4ec83edd3c1cea813dbb88f402a0cd5ca26a"
 
       def install
         bin.install "twitter-cleaner"
