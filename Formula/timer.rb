@@ -5,12 +5,12 @@
 class Timer < Formula
   desc "Timer is like sleep, but reports progress."
   homepage "https://github.com/caarlos0/timer"
-  version "1.4.0"
+  version "1.4.1"
   license "MIT"
 
   on_macos do
-    url "https://github.com/caarlos0/timer/releases/download/v1.4.0/timer_darwin_all.tar.gz"
-    sha256 "acda20451ef499602fb0a09c4a20783610e735ae5781baa1420a1731d860ae79"
+    url "https://github.com/caarlos0/timer/releases/download/v1.4.1/timer_darwin_all.tar.gz"
+    sha256 "7f522b574f956fd08a220b54d5ee8ed6319658b3e73d482a882501b286962cf0"
 
     def install
       bin.install "timer"
@@ -23,8 +23,8 @@ class Timer < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/caarlos0/timer/releases/download/v1.4.0/timer_linux_arm64.tar.gz"
-      sha256 "2f71e1f2ba5501c82cd7ad179edd7e63dd98f8b02d6b4d3f34a90a634014f2f2"
+      url "https://github.com/caarlos0/timer/releases/download/v1.4.1/timer_linux_arm64.tar.gz"
+      sha256 "6a570de14e0417b534981d3ae52a2f08121273d9d090ce3694c398c1d6c8d34f"
 
       def install
         bin.install "timer"
@@ -35,8 +35,8 @@ class Timer < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/caarlos0/timer/releases/download/v1.4.0/timer_linux_amd64.tar.gz"
-      sha256 "d0570d0bbc92be32b36750e42e6cca0b0bd2a329cf487854744a8576243ee6cc"
+      url "https://github.com/caarlos0/timer/releases/download/v1.4.1/timer_linux_amd64.tar.gz"
+      sha256 "5cbfa741bd6107d449595e2dc97a2f80e97e3ecfbc76c17d21ca05e6c72261cf"
 
       def install
         bin.install "timer"
