@@ -5,12 +5,12 @@
 class OrgStats < Formula
   desc "Get the contributor stats summary from all repositories of any given organization"
   homepage "https://github.com/caarlos0/org-stats"
-  version "1.12.0"
+  version "1.12.1"
   license "MIT"
 
   on_macos do
-    url "https://github.com/caarlos0/org-stats/releases/download/v1.12.0/org-stats_darwin_all.tar.gz"
-    sha256 "b0ea7144531918f6b8f38b63dbe49a30c03f868c309dd80cd8c56730d6002d0b"
+    url "https://github.com/caarlos0/org-stats/releases/download/v1.12.1/org-stats_darwin_all.tar.gz"
+    sha256 "773738eb4c2543f323fabba1ed7fddaea51caeafb85c24011c1975f867feef12"
 
     def install
       bin.install "org-stats"
@@ -24,8 +24,8 @@ class OrgStats < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/caarlos0/org-stats/releases/download/v1.12.0/org-stats_linux_amd64.tar.gz"
-        sha256 "b9f9edaa5f2554408c6150d42b37a3a1b319416fe157734a9f2a6c5f87ad577f"
+        url "https://github.com/caarlos0/org-stats/releases/download/v1.12.1/org-stats_linux_amd64.tar.gz"
+        sha256 "98af34e07c3bc594ac0db5678ce0e91909fd1915a3510bf7c4693babf89a4afb"
 
         def install
           bin.install "org-stats"
@@ -38,8 +38,8 @@ class OrgStats < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/caarlos0/org-stats/releases/download/v1.12.0/org-stats_linux_arm64.tar.gz"
-        sha256 "daa51a1b29b82470fb688dd0cc487f945a34e2a263f38299b999beba35421b3e"
+        url "https://github.com/caarlos0/org-stats/releases/download/v1.12.1/org-stats_linux_arm64.tar.gz"
+        sha256 "a1b722f390c715b66df64afca21ab434827bab961a611658b5d6160ec4d765d3"
 
         def install
           bin.install "org-stats"
