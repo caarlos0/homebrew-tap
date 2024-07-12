@@ -10,7 +10,7 @@ class OrgStats < Formula
 
   on_macos do
     url "https://github.com/caarlos0/org-stats/releases/download/v1.12.0/org-stats_darwin_all.tar.gz"
-    sha256 "effbf11332380bf92922d0e9a0cca485981ca1e01d941522fe3a2fefc126aa36"
+    sha256 "b0ea7144531918f6b8f38b63dbe49a30c03f868c309dd80cd8c56730d6002d0b"
 
     def install
       bin.install "org-stats"
@@ -25,7 +25,7 @@ class OrgStats < Formula
     on_intel do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/caarlos0/org-stats/releases/download/v1.12.0/org-stats_linux_amd64.tar.gz"
-        sha256 "7512d75f2e868b1e02d20a610c566fa6a5fcc976853f596e7f82c52878f85402"
+        sha256 "b9f9edaa5f2554408c6150d42b37a3a1b319416fe157734a9f2a6c5f87ad577f"
 
         def install
           bin.install "org-stats"
@@ -39,7 +39,7 @@ class OrgStats < Formula
     on_arm do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/caarlos0/org-stats/releases/download/v1.12.0/org-stats_linux_arm64.tar.gz"
-        sha256 "9e04292574a8c08f8825341145e0867e8da6f9dd9ef9924bf2cd18925a381fea"
+        sha256 "daa51a1b29b82470fb688dd0cc487f945a34e2a263f38299b999beba35421b3e"
 
         def install
           bin.install "org-stats"
