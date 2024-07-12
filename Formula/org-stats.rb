@@ -5,11 +5,12 @@
 class OrgStats < Formula
   desc "Get the contributor stats summary from all repositories of any given organization"
   homepage "https://github.com/caarlos0/org-stats"
-  version "1.11.2"
+  version "1.12.0"
+  license "MIT"
 
   on_macos do
-    url "https://github.com/caarlos0/org-stats/releases/download/v1.11.2/org-stats_darwin_all.tar.gz"
-    sha256 "7c3dfdf13ca78fd71b37bb43c980477ca8a5379118fe54dea7c59bb767e2d7ae"
+    url "https://github.com/caarlos0/org-stats/releases/download/v1.12.0/org-stats_darwin_all.tar.gz"
+    sha256 "effbf11332380bf92922d0e9a0cca485981ca1e01d941522fe3a2fefc126aa36"
 
     def install
       bin.install "org-stats"
@@ -21,28 +22,32 @@ class OrgStats < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/caarlos0/org-stats/releases/download/v1.11.2/org-stats_linux_arm64.tar.gz"
-      sha256 "2951923f488d1ce4c7c7f352fd7a2d55b2935a42d1960675a16cc8bbb11b82e4"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/caarlos0/org-stats/releases/download/v1.12.0/org-stats_linux_amd64.tar.gz"
+        sha256 "7512d75f2e868b1e02d20a610c566fa6a5fcc976853f596e7f82c52878f85402"
 
-      def install
-        bin.install "org-stats"
-        bash_completion.install "completions/org-stats.bash" => "org-stats"
-        zsh_completion.install "completions/org-stats.zsh" => "_org-stats"
-        fish_completion.install "completions/org-stats.fish"
-        man1.install "manpages/org-stats.1.gz"
+        def install
+          bin.install "org-stats"
+          bash_completion.install "completions/org-stats.bash" => "org-stats"
+          zsh_completion.install "completions/org-stats.zsh" => "_org-stats"
+          fish_completion.install "completions/org-stats.fish"
+          man1.install "manpages/org-stats.1.gz"
+        end
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/caarlos0/org-stats/releases/download/v1.11.2/org-stats_linux_amd64.tar.gz"
-      sha256 "4f1ced3d4b309dbc2dbfd8e175eb392aa6ed6a37d2523803cbf68325b452cba1"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/caarlos0/org-stats/releases/download/v1.12.0/org-stats_linux_arm64.tar.gz"
+        sha256 "9e04292574a8c08f8825341145e0867e8da6f9dd9ef9924bf2cd18925a381fea"
 
-      def install
-        bin.install "org-stats"
-        bash_completion.install "completions/org-stats.bash" => "org-stats"
-        zsh_completion.install "completions/org-stats.zsh" => "_org-stats"
-        fish_completion.install "completions/org-stats.fish"
-        man1.install "manpages/org-stats.1.gz"
+        def install
+          bin.install "org-stats"
+          bash_completion.install "completions/org-stats.bash" => "org-stats"
+          zsh_completion.install "completions/org-stats.zsh" => "_org-stats"
+          fish_completion.install "completions/org-stats.fish"
+          man1.install "manpages/org-stats.1.gz"
+        end
       end
     end
   end
