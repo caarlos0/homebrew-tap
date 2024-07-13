@@ -5,12 +5,12 @@
 class Timer < Formula
   desc "Timer is like sleep, but reports progress."
   homepage "https://github.com/caarlos0/timer"
-  version "1.4.1"
+  version "1.4.2"
   license "MIT"
 
   on_macos do
-    url "https://github.com/caarlos0/timer/releases/download/v1.4.1/timer_darwin_all.tar.gz"
-    sha256 "7f522b574f956fd08a220b54d5ee8ed6319658b3e73d482a882501b286962cf0"
+    url "https://github.com/caarlos0/timer/releases/download/v1.4.2/timer_darwin_all.tar.gz"
+    sha256 "d3a6af01f18a2956638d1ee43fc8b4309a5874659d6d60ffcbfb1c010d824b4f"
 
     def install
       bin.install "timer"
@@ -22,28 +22,32 @@ class Timer < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/caarlos0/timer/releases/download/v1.4.1/timer_linux_arm64.tar.gz"
-      sha256 "6a570de14e0417b534981d3ae52a2f08121273d9d090ce3694c398c1d6c8d34f"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/caarlos0/timer/releases/download/v1.4.2/timer_linux_amd64.tar.gz"
+        sha256 "3ddf3e794ba769eae24c2fdae2f300be751b33eb1eae359254304dc0c8b48859"
 
-      def install
-        bin.install "timer"
-        bash_completion.install "completions/timer.bash" => "timer"
-        zsh_completion.install "completions/timer.zsh" => "_timer"
-        fish_completion.install "completions/timer.fish"
-        man1.install "manpages/timer.1.gz"
+        def install
+          bin.install "timer"
+          bash_completion.install "completions/timer.bash" => "timer"
+          zsh_completion.install "completions/timer.zsh" => "_timer"
+          fish_completion.install "completions/timer.fish"
+          man1.install "manpages/timer.1.gz"
+        end
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/caarlos0/timer/releases/download/v1.4.1/timer_linux_amd64.tar.gz"
-      sha256 "5cbfa741bd6107d449595e2dc97a2f80e97e3ecfbc76c17d21ca05e6c72261cf"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/caarlos0/timer/releases/download/v1.4.2/timer_linux_arm64.tar.gz"
+        sha256 "2501d7872545ad48bcee543eb9cd4cb3bf96efe6c13a874c074a76e799afbd45"
 
-      def install
-        bin.install "timer"
-        bash_completion.install "completions/timer.bash" => "timer"
-        zsh_completion.install "completions/timer.zsh" => "_timer"
-        fish_completion.install "completions/timer.fish"
-        man1.install "manpages/timer.1.gz"
+        def install
+          bin.install "timer"
+          bash_completion.install "completions/timer.bash" => "timer"
+          zsh_completion.install "completions/timer.zsh" => "_timer"
+          fish_completion.install "completions/timer.fish"
+          man1.install "manpages/timer.1.gz"
+        end
       end
     end
   end
