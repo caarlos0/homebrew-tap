@@ -5,12 +5,12 @@
 class Svu < Formula
   desc "Semantic Version Utility"
   homepage "https://github.com/caarlos0/svu"
-  version "2.1.1"
+  version "2.2.0"
   license "MIT"
 
   on_macos do
-    url "https://github.com/caarlos0/svu/releases/download/v2.1.1/svu_2.1.1_darwin_all.tar.gz"
-    sha256 "c77b7f7b5a6267c3838f36b70b9e974228d9ca1a43322f9a4ddfddf001458b92"
+    url "https://github.com/caarlos0/svu/releases/download/v2.2.0/svu_2.2.0_darwin_all.tar.gz"
+    sha256 "c8e5511b57a5ea1f9eed6d0430f27ad67b8438e1459b9915217dae96772df11e"
 
     def install
       bin.install "svu"
@@ -20,8 +20,8 @@ class Svu < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/caarlos0/svu/releases/download/v2.1.1/svu_2.1.1_linux_amd64.tar.gz"
-        sha256 "5da10d8fb1a0bb27a18504d6ad7d7ec9935db0cf49f0f71534563885c464ccfd"
+        url "https://github.com/caarlos0/svu/releases/download/v2.2.0/svu_2.2.0_linux_amd64.tar.gz"
+        sha256 "55bd4579323ec589c1e96d0242295e231c526abb1ae8726945c60385510d96b5"
 
         def install
           bin.install "svu"
@@ -30,8 +30,8 @@ class Svu < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/caarlos0/svu/releases/download/v2.1.1/svu_2.1.1_linux_arm64.tar.gz"
-        sha256 "94af2c36adc2b446e295ddc7ae10945ace9435b59de651728cfe0f71930c2a77"
+        url "https://github.com/caarlos0/svu/releases/download/v2.2.0/svu_2.2.0_linux_arm64.tar.gz"
+        sha256 "bade78d00016e7ac4b28e8981d24e486ea48720c2e477c093457bcd0285b15ad"
 
         def install
           bin.install "svu"
