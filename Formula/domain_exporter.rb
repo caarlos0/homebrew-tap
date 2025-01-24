@@ -5,12 +5,12 @@
 class DomainExporter < Formula
   desc "Exports the expiration time of your domains in the Prometheus format."
   homepage "https://github.com/caarlos0/domain_exporter"
-  version "1.23.0"
+  version "1.24.0"
   license "MIT"
 
   on_macos do
-    url "https://github.com/caarlos0/domain_exporter/releases/download/v1.23.0/domain_exporter_1.23.0_darwin_all.tar.gz"
-    sha256 "f155a91ba48dd4b0749eafd90799f855b64a9482ff20e49a0612a893e8e5bc08"
+    url "https://github.com/caarlos0/domain_exporter/releases/download/v1.24.0/domain_exporter_1.24.0_darwin_all.tar.gz"
+    sha256 "b4a3384b904bcd9de6d2586768de35ec00096f5d7ab903c457a0c7e0b94c3a96"
 
     def install
       bin.install "domain_exporter"
@@ -18,20 +18,24 @@ class DomainExporter < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/caarlos0/domain_exporter/releases/download/v1.23.0/domain_exporter_1.23.0_linux_arm64.tar.gz"
-      sha256 "6c0c1e552cd455521beb42ed46d99dc394ba7584b4b01acf526a2f2d5b7f8f14"
+    if Hardware::CPU.intel?
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/caarlos0/domain_exporter/releases/download/v1.24.0/domain_exporter_1.24.0_linux_amd64.tar.gz"
+        sha256 "f2abcf44026935b1558365159f380625df7918cf42ea5b2a86836cfda0bf730c"
 
-      def install
-        bin.install "domain_exporter"
+        def install
+          bin.install "domain_exporter"
+        end
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/caarlos0/domain_exporter/releases/download/v1.23.0/domain_exporter_1.23.0_linux_amd64.tar.gz"
-      sha256 "825c454dd49f2f0e405ac05189dc17c698ef8fffb70ec15e862e84bd06817b57"
+    if Hardware::CPU.arm?
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/caarlos0/domain_exporter/releases/download/v1.24.0/domain_exporter_1.24.0_linux_arm64.tar.gz"
+        sha256 "ac82d14850e727956dd9b22d4f1f55f009e831a6461dfd337d1ff8c1f1ffd828"
 
-      def install
-        bin.install "domain_exporter"
+        def install
+          bin.install "domain_exporter"
+        end
       end
     end
   end
