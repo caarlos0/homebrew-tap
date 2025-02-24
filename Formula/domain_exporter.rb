@@ -5,12 +5,12 @@
 class DomainExporter < Formula
   desc "Exports the expiration time of your domains in the Prometheus format."
   homepage "https://github.com/caarlos0/domain_exporter"
-  version "1.24.0"
+  version "1.24.1"
   license "MIT"
 
   on_macos do
-    url "https://github.com/caarlos0/domain_exporter/releases/download/v1.24.0/domain_exporter_1.24.0_darwin_all.tar.gz"
-    sha256 "b4a3384b904bcd9de6d2586768de35ec00096f5d7ab903c457a0c7e0b94c3a96"
+    url "https://github.com/caarlos0/domain_exporter/releases/download/v1.24.1/domain_exporter_1.24.1_darwin_all.tar.gz"
+    sha256 "3fb80a4d0f4719a528749e047a1eb74b1a8b5ad8c336715fd8be375fef8c6116"
 
     def install
       bin.install "domain_exporter"
@@ -20,8 +20,8 @@ class DomainExporter < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/caarlos0/domain_exporter/releases/download/v1.24.0/domain_exporter_1.24.0_linux_amd64.tar.gz"
-        sha256 "f2abcf44026935b1558365159f380625df7918cf42ea5b2a86836cfda0bf730c"
+        url "https://github.com/caarlos0/domain_exporter/releases/download/v1.24.1/domain_exporter_1.24.1_linux_amd64.tar.gz"
+        sha256 "473faec7cb51290b01dfc6ad11a49f3cdaf54ec2bbeb8501c886c25f89772457"
 
         def install
           bin.install "domain_exporter"
@@ -30,8 +30,8 @@ class DomainExporter < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/caarlos0/domain_exporter/releases/download/v1.24.0/domain_exporter_1.24.0_linux_arm64.tar.gz"
-        sha256 "ac82d14850e727956dd9b22d4f1f55f009e831a6461dfd337d1ff8c1f1ffd828"
+        url "https://github.com/caarlos0/domain_exporter/releases/download/v1.24.1/domain_exporter_1.24.1_linux_arm64.tar.gz"
+        sha256 "8b098bd239f2394f03aab3bb55fbd9261ba724311b0e78375511026627965f53"
 
         def install
           bin.install "domain_exporter"
