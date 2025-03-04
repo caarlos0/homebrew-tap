@@ -5,11 +5,12 @@
 class VersionExporter < Formula
   desc "Exports the expiration time of your domains in the Prometheus format."
   homepage "https://github.com/caarlos0/version_exporter"
-  version "1.2.0"
+  version "1.2.1"
+  license "MIT"
 
   on_macos do
-    url "https://github.com/caarlos0/version_exporter/releases/download/v1.2.0/version_exporter_1.2.0_darwin_all.tar.gz"
-    sha256 "eea9e0ae6c67a4e97db4dcadc0c92094de0f3262d142f9aecc4cc20d2b72e495"
+    url "https://github.com/caarlos0/version_exporter/releases/download/v1.2.1/version_exporter_1.2.1_darwin_all.tar.gz"
+    sha256 "c7eb47f254b41064588f0d096811ea4367dbdc9bc14f29bbdb7f8f162ea110db"
 
     def install
       bin.install "version_exporter"
@@ -17,20 +18,24 @@ class VersionExporter < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/caarlos0/version_exporter/releases/download/v1.2.0/version_exporter_1.2.0_linux_arm64.tar.gz"
-      sha256 "43d3ec87f6175e123ee31e546362f989f6f084dafaf3f70dd5e7dedb2c1b8e87"
+    if Hardware::CPU.intel?
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/caarlos0/version_exporter/releases/download/v1.2.1/version_exporter_1.2.1_linux_amd64.tar.gz"
+        sha256 "ce179af1c9b8c3431e7c1a0d3cd3b5ff54ba3dfb3e97416a4c8e1de208321113"
 
-      def install
-        bin.install "version_exporter"
+        def install
+          bin.install "version_exporter"
+        end
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/caarlos0/version_exporter/releases/download/v1.2.0/version_exporter_1.2.0_linux_amd64.tar.gz"
-      sha256 "e65b39db857c922b299f4bd161dc57f9e15d5d47ea080b557b7f4925f7fd1661"
+    if Hardware::CPU.arm?
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/caarlos0/version_exporter/releases/download/v1.2.1/version_exporter_1.2.1_linux_arm64.tar.gz"
+        sha256 "1b8c763e2feb822d452241e44031d44b42ada5b4c2f1af677cf26482b1a6cfcc"
 
-      def install
-        bin.install "version_exporter"
+        def install
+          bin.install "version_exporter"
+        end
       end
     end
   end
