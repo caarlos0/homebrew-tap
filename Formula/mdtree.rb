@@ -5,12 +5,12 @@
 class Mdtree < Formula
   desc "Convert markdown lists into beautiful ASCII trees"
   homepage "https://github.com/caarlos0/mdtree"
-  version "0.1.0"
+  version "0.1.1"
   license "MIT"
 
   on_macos do
-    url "https://github.com/caarlos0/mdtree/releases/download/v0.1.0/mdtree_0.1.0_darwin_all.tar.gz"
-    sha256 "4974e308784e6d7d5e9d51b7857eaa5e763949b1c0c55de164715a46836e531f"
+    url "https://github.com/caarlos0/mdtree/releases/download/v0.1.1/mdtree_0.1.1_darwin_all.tar.gz"
+    sha256 "a94da40f7957149d5377ac69ed866c0223b744408e189939ec4631dab871424c"
 
     def install
       bin.install "mdtree"
@@ -18,20 +18,20 @@ class Mdtree < Formula
   end
 
   on_linux do
-    on_intel do
+    if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/caarlos0/mdtree/releases/download/v0.1.0/mdtree_0.1.0_linux_amd64.tar.gz"
-        sha256 "d0d26aa89305cdb6bc7a547467c586de684bcd34213f03f1596773981f7a44e5"
+        url "https://github.com/caarlos0/mdtree/releases/download/v0.1.1/mdtree_0.1.1_linux_amd64.tar.gz"
+        sha256 "518e2f26dec0698a6429b2cdbbbb859aab06b55b06d9b7d6cfd4dcd1db981da2"
 
         def install
           bin.install "mdtree"
         end
       end
     end
-    on_arm do
+    if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/caarlos0/mdtree/releases/download/v0.1.0/mdtree_0.1.0_linux_arm64.tar.gz"
-        sha256 "4e0ed4f0537c34b9560b4e0fee9529d113b01c8b04199cedf97013b6b94c56ca"
+        url "https://github.com/caarlos0/mdtree/releases/download/v0.1.1/mdtree_0.1.1_linux_arm64.tar.gz"
+        sha256 "fd8681c8a597e78212b1a57a813d3f229a6ebb058d20664e5c338cdd6e335d8b"
 
         def install
           bin.install "mdtree"
