@@ -5,36 +5,45 @@
 class Svu < Formula
   desc "Semantic Version Utility"
   homepage "https://github.com/caarlos0/svu"
-  version "3.1.0"
+  version "3.2.0"
   license "MIT"
 
   on_macos do
-    url "https://github.com/caarlos0/svu/releases/download/v3.1.0/svu_3.1.0_darwin_all.tar.gz"
-    sha256 "3e92f494b106eeea7cd655e336d9eef47669728d2953fd8e271817c5d661d9db"
+    url "https://github.com/caarlos0/svu/releases/download/v3.2.0/svu_darwin_all.tar.gz"
+    sha256 "253ee195d96d18f89885216f905f9b318546af03085d8e44c7ba56ecb191e1ac"
 
     def install
       bin.install "svu"
+      bash_completion.install "completions/svu.bash" => "svu"
+      zsh_completion.install "completions/svu.zsh" => "_svu"
+      fish_completion.install "completions/svu.fish"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/caarlos0/svu/releases/download/v3.1.0/svu_3.1.0_linux_amd64.tar.gz"
-        sha256 "c4d63b67062cc6fb0bddbecc0a86dac96f87db7763be4b09de90a2f9489a5a7c"
+        url "https://github.com/caarlos0/svu/releases/download/v3.2.0/svu_linux_amd64.tar.gz"
+        sha256 "e1048b29fe91936eafb67a0cac58f45f311afeb94b6cbd31a2e3ee97ee785764"
 
         def install
           bin.install "svu"
+          bash_completion.install "completions/svu.bash" => "svu"
+          zsh_completion.install "completions/svu.zsh" => "_svu"
+          fish_completion.install "completions/svu.fish"
         end
       end
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/caarlos0/svu/releases/download/v3.1.0/svu_3.1.0_linux_arm64.tar.gz"
-        sha256 "9bc786b15e02158a50c219371e40a3e8e73b6bf2d0364f05b7a0adc9530d79ac"
+        url "https://github.com/caarlos0/svu/releases/download/v3.2.0/svu_linux_arm64.tar.gz"
+        sha256 "a9db778439b78e9c6288c1a5618174e4bd4d77062caff1ecfa2cdb55731ce97d"
 
         def install
           bin.install "svu"
+          bash_completion.install "completions/svu.bash" => "svu"
+          zsh_completion.install "completions/svu.zsh" => "_svu"
+          fish_completion.install "completions/svu.fish"
         end
       end
     end
