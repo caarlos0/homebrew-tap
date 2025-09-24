@@ -5,12 +5,12 @@
 class Svu < Formula
   desc "Semantic Version Utility"
   homepage "https://github.com/caarlos0/svu"
-  version "3.2.3"
+  version "3.2.4"
   license "MIT"
 
   on_macos do
-    url "https://github.com/caarlos0/svu/releases/download/v3.2.3/svu_3.2.3_darwin_all.tar.gz"
-    sha256 "3e62d42a0eae1a6d7da28ccccff1757958cbb72fd42b0d52a772475b845c9446"
+    url "https://github.com/caarlos0/svu/releases/download/v3.2.4/svu_3.2.4_darwin_all.tar.gz"
+    sha256 "e5664b4de41c6696358bd456f5283e86f0bd30e65ab65faad349293d804f088e"
 
     def install
       bin.install "svu"
@@ -21,30 +21,24 @@ class Svu < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/caarlos0/svu/releases/download/v3.2.3/svu_3.2.3_linux_amd64.tar.gz"
-        sha256 "2509db2b9a5d97a212efb8e242e5782a1a62459ac516b3663c525db6b8474c02"
-
-        def install
-          bin.install "svu"
-          bash_completion.install "completions/svu.bash" => "svu"
-          zsh_completion.install "completions/svu.zsh" => "_svu"
-          fish_completion.install "completions/svu.fish"
-        end
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/caarlos0/svu/releases/download/v3.2.4/svu_3.2.4_linux_amd64.tar.gz"
+      sha256 "89a0bd658256c8561272ef2927ec0240c860779b042598c0456864583c88f702"
+      def install
+        bin.install "svu"
+        bash_completion.install "completions/svu.bash" => "svu"
+        zsh_completion.install "completions/svu.zsh" => "_svu"
+        fish_completion.install "completions/svu.fish"
       end
     end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/caarlos0/svu/releases/download/v3.2.3/svu_3.2.3_linux_arm64.tar.gz"
-        sha256 "25489d476893908c79c168b241d0c1cecbb8e749556bb4b54adf3222488aa72b"
-
-        def install
-          bin.install "svu"
-          bash_completion.install "completions/svu.bash" => "svu"
-          zsh_completion.install "completions/svu.zsh" => "_svu"
-          fish_completion.install "completions/svu.fish"
-        end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/caarlos0/svu/releases/download/v3.2.4/svu_3.2.4_linux_arm64.tar.gz"
+      sha256 "59b973e51e65bb153b97a1d4ca1e46347136eedc0da60594f6bb5b87c8b1ad45"
+      def install
+        bin.install "svu"
+        bash_completion.install "completions/svu.bash" => "svu"
+        zsh_completion.install "completions/svu.zsh" => "_svu"
+        fish_completion.install "completions/svu.fish"
       end
     end
   end
