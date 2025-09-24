@@ -3,7 +3,7 @@ cask "pinata" do
   name "pinata"
   desc "GitHub Actions pinner."
   homepage "https://github.com/caarlos0/pinata"
-  version "0.2.1"
+  version "0.3.0"
 
   livecheck do
     skip "Auto-generated on release."
@@ -15,12 +15,12 @@ cask "pinata" do
     on_intel do
       url "https://github.com/caarlos0/pinata/releases/download/v#{version}/pinata_#{version}_darwin_amd64.tar.gz",
         verified: "github.com/caarlos0/pinata"
-      sha256 "45bb46a2f16b4b2b72ed129d4d02fe94e87d778916ea915b16e304f61534a22a"
+      sha256 "bcb3f3967ac3bc21b84cf7caa543471e860d1eec223e468b9ec5f30772ca9aea"
     end
     on_arm do
       url "https://github.com/caarlos0/pinata/releases/download/v#{version}/pinata_#{version}_darwin_arm64.tar.gz",
         verified: "github.com/caarlos0/pinata"
-      sha256 "0eb7d5b777aacc595f95ad41e9c7e06cb428e363713949c7c6d69ca8d02a163f"
+      sha256 "2fa801c62c1feb1795f2587e73b76a7fb96e2d8b7d4cc2592a477ab3696259c6"
     end
   end
 
@@ -28,12 +28,12 @@ cask "pinata" do
     on_intel do
       url "https://github.com/caarlos0/pinata/releases/download/v#{version}/pinata_#{version}_linux_amd64.tar.gz",
         verified: "github.com/caarlos0/pinata"
-      sha256 "5d83d13a68d85ed9645c9925ac003902190b99a4507ed8b5717646fa5997c5b7"
+      sha256 "be290f3f82113b2ce5db721f479f08312e2eaec4612671882f16c7e83c7ee04d"
     end
     on_arm do
       url "https://github.com/caarlos0/pinata/releases/download/v#{version}/pinata_#{version}_linux_arm64.tar.gz",
         verified: "github.com/caarlos0/pinata"
-      sha256 "0c0f09561369c31bbfd6c7df64b4af553c27cd7dea3d05b80da607ea844bcd81"
+      sha256 "1db5bc2e654b4c727177de54ff8b37da68a44b0e83193e89b93aff6e1ef49efb"
     end
   end
 
