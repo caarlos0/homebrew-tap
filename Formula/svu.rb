@@ -5,8 +5,10 @@
 class Svu < Formula
   desc "Semantic Version Utility"
   homepage "https://github.com/caarlos0/svu"
-  version "3.2.4"
+  version "3.2.5"
   license "MIT"
+
+  disable! date: "2025-11-01", because: "the cask should be used now instead", replacement_cask: "svu"
 
   on_macos do
     url "https://github.com/caarlos0/svu/releases/download/v3.2.4/svu_3.2.4_darwin_all.tar.gz"
