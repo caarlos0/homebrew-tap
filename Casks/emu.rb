@@ -10,7 +10,7 @@ cask "emu" do
   end
 
   binary "emu"
-  rename "emu*/*", "emu"
+  rename "emu*", "emu"
 
   on_macos do
     on_intel do
