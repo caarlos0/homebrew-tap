@@ -36,7 +36,7 @@ cask "emu" do
 
   postflight do
     # completions
-    generate_completions_from_executable(bin/"emu", "completion")
+    generate_completions_from_executable("emu", "completion")
     # manpages
     man_content = `./emu docs --format man-with-section`
     File.write("emu.1", man_content)
