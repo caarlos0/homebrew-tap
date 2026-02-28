@@ -3,7 +3,7 @@ cask "svu" do
   name "svu"
   desc "Semantic Version Utility"
   homepage "https://github.com/caarlos0/svu"
-  version "3.3.0"
+  version "3.4.0"
 
   livecheck do
     skip "Auto-generated on release."
@@ -18,19 +18,19 @@ cask "svu" do
   on_macos do
     url "https://github.com/caarlos0/svu/releases/download/v#{version}/svu_#{version}_darwin_all.tar.gz",
         verified: "github.com/caarlos0/svu"
-    sha256 "d32d3b793fae1ec86af6d8d423fc21a63dc1b17e531a2076cddb8630bded9f31"
+    sha256 "ef1534a5e3eddef786a8b3ae0a280fc295662e3d3f738135ecb9f6477f7c4aab"
   end
 
   on_linux do
     on_intel do
       url "https://github.com/caarlos0/svu/releases/download/v#{version}/svu_#{version}_linux_amd64.tar.gz",
         verified: "github.com/caarlos0/svu"
-      sha256 "3c093d9461b1875662df232319a314641b78ae78ddfec9378f572258803d699c"
+      sha256 "f9fe4f0edb7d8cf4b0ecd84dd8ffa7e36186da6c701ab5fa59cb75a100a1705e"
     end
     on_arm do
       url "https://github.com/caarlos0/svu/releases/download/v#{version}/svu_#{version}_linux_arm64.tar.gz",
         verified: "github.com/caarlos0/svu"
-      sha256 "8f00c170037bcdc1ba7f2b974ec5ac1b39da7457bebc985c5fd410c724e03bac"
+      sha256 "ba8efd1da67532b811fe2864e43a93128b0c02702d1ad3a685ad58f41923f0eb"
     end
   end
 
