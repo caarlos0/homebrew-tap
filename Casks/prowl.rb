@@ -3,17 +3,17 @@ cask "prowl" do
   version "1.0.0"
 
   on_macos do
-    sha256 "6d5541dc3a6ad2e6d2a846903a9b4b99d1f8168f377b4aa404dc0d439dd189f9"
+    sha256 "2ac3b70aecae13b70bd68a0ecfb57588e2c9588d6fb3f730fccb26bed844dff8"
     url "https://github.com/caarlos0/prowl/releases/download/v#{version}/prowl_Darwin_all.tar.gz"
   end
 
   on_linux do
     on_intel do
-      sha256 "1c294c2b1d31ef81dd36f91b26211ab7d499d6cbb316f67e68b8aeab8ee55788"
+      sha256 "8fe7e8b9d9b6e79e3bd2e51f733dbe2646995c98d54cd51cb2253e0dd2defc57"
       url "https://github.com/caarlos0/prowl/releases/download/v#{version}/prowl_Linux_x86_64.tar.gz"
     end
     on_arm do
-      sha256 "e219a7c9d681b00b4a28359d8974ce21e420ebb7c116027209e020b0448d1819"
+      sha256 "fd508018c782f43c7e0faa66f5215d54b6450ae39c856d461feba1762283def5"
       url "https://github.com/caarlos0/prowl/releases/download/v#{version}/prowl_Linux_arm64.tar.gz"
     end
   end
