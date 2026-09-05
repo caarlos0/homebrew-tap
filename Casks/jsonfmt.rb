@@ -12,20 +12,17 @@ cask "jsonfmt" do
   binary "jsonfmt"
 
   on_macos do
-    url "https://github.com/caarlos0/jsonfmt/releases/download/v#{version}/jsonfmt_#{version}_darwin_all.tar.gz",
-        verified: "github.com/caarlos0/"
+    url "https://github.com/caarlos0/jsonfmt/releases/download/v#{version}/jsonfmt_#{version}_darwin_all.tar.gz"
     sha256 "f104cc42aa5c9524367f37aa5895e1f2b608ec6ac03fe03e768ddcd001afca8b"
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/caarlos0/jsonfmt/releases/download/v#{version}/jsonfmt_#{version}_linux_amd64.tar.gz",
-        verified: "github.com/caarlos0/"
+      url "https://github.com/caarlos0/jsonfmt/releases/download/v#{version}/jsonfmt_#{version}_linux_amd64.tar.gz"
       sha256 "62af811df23a85b7104b03b83c76b9f581e1d234f6248474811a1ae1c8141c63"
     end
     on_arm do
-      url "https://github.com/caarlos0/jsonfmt/releases/download/v#{version}/jsonfmt_#{version}_linux_arm64.tar.gz",
-        verified: "github.com/caarlos0/"
+      url "https://github.com/caarlos0/jsonfmt/releases/download/v#{version}/jsonfmt_#{version}_linux_arm64.tar.gz"
       sha256 "07f6e76348fe4b3305cfc57e89ad53b590c7b20b8f06bf55a1c4bdfd22ada85d"
     end
   end

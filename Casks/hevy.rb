@@ -5,25 +5,21 @@ cask "hevy" do
   on_macos do
     on_arm do
       sha256 "3c61ed25d58852e6d8bdfe7c03cb49bb11b314bab1b5025f3230429b93eb9e62"
-      url "https://github.com/caarlos0/hevy/releases/download/v#{version}/hevy_Darwin_arm64.tar.gz",
-        verified: "github.com/caarlos0/hevy"
+      url "https://github.com/caarlos0/hevy/releases/download/v#{version}/hevy_Darwin_arm64.tar.gz"
     end
     on_intel do
       sha256 "5d5bab9e74aa3a6841bc9d27c8d7ebf8f13e19060914e7ee7cb450c44a4ebd09"
-      url "https://github.com/caarlos0/hevy/releases/download/v#{version}/hevy_Darwin_x86_64.tar.gz",
-        verified: "github.com/caarlos0/hevy"
+      url "https://github.com/caarlos0/hevy/releases/download/v#{version}/hevy_Darwin_x86_64.tar.gz"
     end
   end
   on_linux do
     on_arm do
       sha256 "7c17c4dde6c16694bd73f681f7433c2092c6cea6d0cd816b7d0493b02ae7221a"
-      url "https://github.com/caarlos0/hevy/releases/download/v#{version}/hevy_Linux_arm64.tar.gz",
-        verified: "github.com/caarlos0/hevy"
+      url "https://github.com/caarlos0/hevy/releases/download/v#{version}/hevy_Linux_arm64.tar.gz"
     end
     on_intel do
       sha256 "525927babc4253c664eeea9b631b84567fe14df2d33460d376cb5e5c3ecf6eaa"
-      url "https://github.com/caarlos0/hevy/releases/download/v#{version}/hevy_Linux_x86_64.tar.gz",
-        verified: "github.com/caarlos0/hevy"
+      url "https://github.com/caarlos0/hevy/releases/download/v#{version}/hevy_Linux_x86_64.tar.gz"
     end
   end
 

@@ -4,20 +4,17 @@ cask "simple-proxy" do
 
   on_macos do
     sha256 "ab36cc2bfe6789f062980deb067237d63c2c3967064e47a6bcb1a68a67b4c2ca"
-    url "https://github.com/caarlos0/simple-proxy/releases/download/v#{version}/simple-proxy_#{version}_darwin_all.tar.gz",
-        verified: "github.com/caarlos0/simple-proxy"
+    url "https://github.com/caarlos0/simple-proxy/releases/download/v#{version}/simple-proxy_#{version}_darwin_all.tar.gz"
   end
 
   on_linux do
     on_intel do
       sha256 "32d13efe1fe0bee438caa4b2ca56536d68c710c7190b261645278c07f6d8a72b"
-      url "https://github.com/caarlos0/simple-proxy/releases/download/v#{version}/simple-proxy_#{version}_linux_amd64.tar.gz",
-        verified: "github.com/caarlos0/simple-proxy"
+      url "https://github.com/caarlos0/simple-proxy/releases/download/v#{version}/simple-proxy_#{version}_linux_amd64.tar.gz"
     end
     on_arm do
       sha256 "a6871b7c24050a713f113382b7359964eb5ed6f3a99e7f3781611d396d304816"
-      url "https://github.com/caarlos0/simple-proxy/releases/download/v#{version}/simple-proxy_#{version}_linux_arm64.tar.gz",
-        verified: "github.com/caarlos0/simple-proxy"
+      url "https://github.com/caarlos0/simple-proxy/releases/download/v#{version}/simple-proxy_#{version}_linux_arm64.tar.gz"
     end
   end
 

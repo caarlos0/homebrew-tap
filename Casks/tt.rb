@@ -16,20 +16,17 @@ cask "tt" do
   fish_completion "completions/tt.fish"
 
   on_macos do
-    url "https://github.com/caarlos0/tasktimer/releases/download/v#{version}/tt_darwin_all.tar.gz",
-        verified: "github.com/caarlos0/"
+    url "https://github.com/caarlos0/tasktimer/releases/download/v#{version}/tt_darwin_all.tar.gz"
     sha256 "6ecaa60f43182eb3633d2c4ae0f867c64663f38c9caf04330468499f783bbf5c"
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/caarlos0/tasktimer/releases/download/v#{version}/tt_linux_amd64.tar.gz",
-        verified: "github.com/caarlos0/"
+      url "https://github.com/caarlos0/tasktimer/releases/download/v#{version}/tt_linux_amd64.tar.gz"
       sha256 "128c117ab6f6d5a2c1da1cff2d9fd0524a387517f05541159e237a81f978d0fd"
     end
     on_arm do
-      url "https://github.com/caarlos0/tasktimer/releases/download/v#{version}/tt_linux_arm64.tar.gz",
-        verified: "github.com/caarlos0/"
+      url "https://github.com/caarlos0/tasktimer/releases/download/v#{version}/tt_linux_arm64.tar.gz"
       sha256 "43ab39bdd35243f73535b51f84f3997806683261c5c2ceca46670ccf19ace985"
     end
   end

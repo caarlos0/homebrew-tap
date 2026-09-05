@@ -5,26 +5,22 @@ cask "pinata" do
   on_macos do
     on_intel do
       sha256 "731c810fe532bf8937be201cd8e383bf90a3dac34fed90cc195e7850f654c810"
-      url "https://github.com/caarlos0/pinata/releases/download/v#{version}/pinata_#{version}_darwin_amd64.tar.gz",
-        verified: "github.com/caarlos0/pinata"
+      url "https://github.com/caarlos0/pinata/releases/download/v#{version}/pinata_#{version}_darwin_amd64.tar.gz"
     end
     on_arm do
       sha256 "8e5c3a690e79493c355636e96404031a3fc57efdcbdc3c64b1eee3a45b8eb9ef"
-      url "https://github.com/caarlos0/pinata/releases/download/v#{version}/pinata_#{version}_darwin_arm64.tar.gz",
-        verified: "github.com/caarlos0/pinata"
+      url "https://github.com/caarlos0/pinata/releases/download/v#{version}/pinata_#{version}_darwin_arm64.tar.gz"
     end
   end
 
   on_linux do
     on_intel do
       sha256 "d8adb79b85237c0fcd10148ab1a595b231ab2706319a8dd9794b184ef2dab9c3"
-      url "https://github.com/caarlos0/pinata/releases/download/v#{version}/pinata_#{version}_linux_amd64.tar.gz",
-        verified: "github.com/caarlos0/pinata"
+      url "https://github.com/caarlos0/pinata/releases/download/v#{version}/pinata_#{version}_linux_amd64.tar.gz"
     end
     on_arm do
       sha256 "e95e50661d9245ca905e2d65f5c02192227e9cb68100dee8b12bf2e7c039a546"
-      url "https://github.com/caarlos0/pinata/releases/download/v#{version}/pinata_#{version}_linux_arm64.tar.gz",
-        verified: "github.com/caarlos0/pinata"
+      url "https://github.com/caarlos0/pinata/releases/download/v#{version}/pinata_#{version}_linux_arm64.tar.gz"
     end
   end
 

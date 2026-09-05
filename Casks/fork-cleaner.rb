@@ -12,20 +12,17 @@ cask "fork-cleaner" do
   binary "fork-cleaner"
 
   on_macos do
-    url "https://github.com/caarlos0/fork-cleaner/releases/download/v#{version}/fork-cleaner_#{version}_darwin_all.tar.gz",
-        verified: "github.com/caarlos0/"
+    url "https://github.com/caarlos0/fork-cleaner/releases/download/v#{version}/fork-cleaner_#{version}_darwin_all.tar.gz"
     sha256 "1195135ef6711f2f1f238b2cc6db8b810e4e7d2aa690ff9c4df3f26c1f4b75b7"
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/caarlos0/fork-cleaner/releases/download/v#{version}/fork-cleaner_#{version}_linux_amd64.tar.gz",
-        verified: "github.com/caarlos0/"
+      url "https://github.com/caarlos0/fork-cleaner/releases/download/v#{version}/fork-cleaner_#{version}_linux_amd64.tar.gz"
       sha256 "4ab8c8c4f6c22db7eb69a23ce55e9fa76ecc6c0742d5c12d2c00d087652b6518"
     end
     on_arm do
-      url "https://github.com/caarlos0/fork-cleaner/releases/download/v#{version}/fork-cleaner_#{version}_linux_arm64.tar.gz",
-        verified: "github.com/caarlos0/"
+      url "https://github.com/caarlos0/fork-cleaner/releases/download/v#{version}/fork-cleaner_#{version}_linux_arm64.tar.gz"
       sha256 "4056d4c5c2f1061a4a4d762265d5c506ce52be8f481371a738c3664ba182c4b6"
     end
   end

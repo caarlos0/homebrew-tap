@@ -12,20 +12,17 @@ cask "domain_exporter" do
   binary "domain_exporter"
 
   on_macos do
-    url "https://github.com/caarlos0/domain_exporter/releases/download/v#{version}/domain_exporter_#{version}_darwin_all.tar.gz",
-        verified: "github.com/caarlos0/"
+    url "https://github.com/caarlos0/domain_exporter/releases/download/v#{version}/domain_exporter_#{version}_darwin_all.tar.gz"
     sha256 "239546aa9979801f631c4143ba3e33e38892ade1bb69c5ef806192e36f26e329"
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/caarlos0/domain_exporter/releases/download/v#{version}/domain_exporter_#{version}_linux_amd64.tar.gz",
-        verified: "github.com/caarlos0/"
+      url "https://github.com/caarlos0/domain_exporter/releases/download/v#{version}/domain_exporter_#{version}_linux_amd64.tar.gz"
       sha256 "be982cc3d7937efb8449f04711070a9c82639fc2aff62f400a7f867a8fd4a2a3"
     end
     on_arm do
-      url "https://github.com/caarlos0/domain_exporter/releases/download/v#{version}/domain_exporter_#{version}_linux_arm64.tar.gz",
-        verified: "github.com/caarlos0/"
+      url "https://github.com/caarlos0/domain_exporter/releases/download/v#{version}/domain_exporter_#{version}_linux_arm64.tar.gz"
       sha256 "51e355fee71fa164462bed8bb46b5bae7f55b298ec865dfba4dd25dbec410460"
     end
   end
