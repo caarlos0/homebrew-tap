@@ -38,8 +38,10 @@ cask "test" do
 
   binary "mybin"
 
-  postflight do
-    system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/mybin"]
+  postflight_steps do
+    on_macos do
+      run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{staged_path}}/mybin"]
+    end
   end
 
   # No zap stanza required
