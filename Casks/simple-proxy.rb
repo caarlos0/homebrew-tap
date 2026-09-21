@@ -28,9 +28,9 @@ cask "simple-proxy" do
 
   binary "simple-proxy"
 
-  postflight do
-    if OS.mac?
-      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/simple-proxy"]
+  postflight_steps do
+    on_macos do
+      run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{staged_path}}/simple-proxy"]
     end
   end
 
